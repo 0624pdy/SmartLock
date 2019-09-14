@@ -8,7 +8,13 @@
 
 #import "AppDelegate.h"
 
+#import "WLBaseNavController.h"
+#import "WLRootVC.h"
+
 @interface AppDelegate ()
+
+@property (nonatomic,strong) WLBaseNavController *rootNav;
+@property (nonatomic,strong) WLRootVC *rootVC;
 
 @end
 
@@ -17,6 +23,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.rootVC = [[WLRootVC alloc] init];
+    self.rootNav = [[WLBaseNavController alloc] initWithRootViewController:self.rootVC];
+    self.window.rootViewController = self.rootNav;
+    
+    self.window.backgroundColor = UIColor.redColor;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

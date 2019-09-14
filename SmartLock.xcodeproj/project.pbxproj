@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		006D3305232D552800C78F70 /* WLBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3304232D552800C78F70 /* WLBaseVC.m */; };
+		006D3308232D554F00C78F70 /* WLBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3307232D554F00C78F70 /* WLBaseNavController.m */; };
+		006D330B232D556A00C78F70 /* WLBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D330A232D556A00C78F70 /* WLBaseTabBarController.m */; };
+		006D3310232D562300C78F70 /* WLRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D330E232D562300C78F70 /* WLRootVC.m */; };
+		006D3311232D562300C78F70 /* WLRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D330F232D562300C78F70 /* WLRootVC.xib */; };
 		0071F09B232D502200D7C612 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0071F09A232D502200D7C612 /* AppDelegate.m */; };
 		0071F09E232D502200D7C612 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0071F09D232D502200D7C612 /* ViewController.m */; };
 		0071F0A1232D502200D7C612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0071F09F232D502200D7C612 /* Main.storyboard */; };
@@ -17,6 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		006D3303232D552800C78F70 /* WLBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLBaseVC.h; sourceTree = "<group>"; };
+		006D3304232D552800C78F70 /* WLBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLBaseVC.m; sourceTree = "<group>"; };
+		006D3306232D554F00C78F70 /* WLBaseNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLBaseNavController.h; sourceTree = "<group>"; };
+		006D3307232D554F00C78F70 /* WLBaseNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLBaseNavController.m; sourceTree = "<group>"; };
+		006D3309232D556A00C78F70 /* WLBaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLBaseTabBarController.h; sourceTree = "<group>"; };
+		006D330A232D556A00C78F70 /* WLBaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLBaseTabBarController.m; sourceTree = "<group>"; };
+		006D330D232D562300C78F70 /* WLRootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLRootVC.h; sourceTree = "<group>"; };
+		006D330E232D562300C78F70 /* WLRootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLRootVC.m; sourceTree = "<group>"; };
+		006D330F232D562300C78F70 /* WLRootVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLRootVC.xib; sourceTree = "<group>"; };
 		0071F096232D502200D7C612 /* SmartLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0071F099232D502200D7C612 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0071F09A232D502200D7C612 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +58,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		006D32FF232D54B000C78F70 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		006D3300232D54B700C78F70 /* Mnager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mnager;
+			sourceTree = "<group>";
+		};
+		006D3301232D54C000C78F70 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				006D330C232D560C00C78F70 /* Root */,
+				006D3302232D550400C78F70 /* BaseVC */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		006D3302232D550400C78F70 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				006D3303232D552800C78F70 /* WLBaseVC.h */,
+				006D3304232D552800C78F70 /* WLBaseVC.m */,
+				006D3306232D554F00C78F70 /* WLBaseNavController.h */,
+				006D3307232D554F00C78F70 /* WLBaseNavController.m */,
+				006D3309232D556A00C78F70 /* WLBaseTabBarController.h */,
+				006D330A232D556A00C78F70 /* WLBaseTabBarController.m */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		006D330C232D560C00C78F70 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				006D330D232D562300C78F70 /* WLRootVC.h */,
+				006D330E232D562300C78F70 /* WLRootVC.m */,
+				006D330F232D562300C78F70 /* WLRootVC.xib */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		0071F08D232D502100D7C612 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +129,9 @@
 				0071F09A232D502200D7C612 /* AppDelegate.m */,
 				0071F09C232D502200D7C612 /* ViewController.h */,
 				0071F09D232D502200D7C612 /* ViewController.m */,
+				006D3301232D54C000C78F70 /* ViewControllers */,
+				006D3300232D54B700C78F70 /* Mnager */,
+				006D32FF232D54B000C78F70 /* Tools */,
 				007B757E232D52AC00F1C0AD /* Support Files */,
 			);
 			path = SmartLock;
@@ -162,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0071F0A6232D502300D7C612 /* LaunchScreen.storyboard in Resources */,
+				006D3311232D562300C78F70 /* WLRootVC.xib in Resources */,
 				0071F0A3232D502300D7C612 /* Assets.xcassets in Resources */,
 				0071F0A1232D502200D7C612 /* Main.storyboard in Resources */,
 			);
@@ -199,8 +263,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006D3305232D552800C78F70 /* WLBaseVC.m in Sources */,
 				0071F09E232D502200D7C612 /* ViewController.m in Sources */,
+				006D3308232D554F00C78F70 /* WLBaseNavController.m in Sources */,
+				006D330B232D556A00C78F70 /* WLBaseTabBarController.m in Sources */,
 				0071F0A9232D502300D7C612 /* main.m in Sources */,
+				006D3310232D562300C78F70 /* WLRootVC.m in Sources */,
 				0071F09B232D502200D7C612 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
