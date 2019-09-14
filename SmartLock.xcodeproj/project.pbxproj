@@ -69,13 +69,21 @@
 				0071F09A232D502200D7C612 /* AppDelegate.m */,
 				0071F09C232D502200D7C612 /* ViewController.h */,
 				0071F09D232D502200D7C612 /* ViewController.m */,
+				007B757E232D52AC00F1C0AD /* Support Files */,
+			);
+			path = SmartLock;
+			sourceTree = "<group>";
+		};
+		007B757E232D52AC00F1C0AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
 				0071F09F232D502200D7C612 /* Main.storyboard */,
 				0071F0A2232D502300D7C612 /* Assets.xcassets */,
 				0071F0A4232D502300D7C612 /* LaunchScreen.storyboard */,
 				0071F0A7232D502300D7C612 /* Info.plist */,
 				0071F0A8232D502300D7C612 /* main.m */,
 			);
-			path = SmartLock;
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 		56B975F98CC8F62FD51C1155 /* Pods */ = {
@@ -84,7 +92,6 @@
 				1AF674DDFE1AB7A7B79179AA /* Pods-SmartLock.debug.xcconfig */,
 				9B23C1BB208C208E53AC2104 /* Pods-SmartLock.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -337,8 +344,9 @@
 			baseConfigurationReference = 1AF674DDFE1AB7A7B79179AA /* Pods-SmartLock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3SAQFVNJ39;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SmartLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -346,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdy.SmartLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -355,8 +364,9 @@
 			baseConfigurationReference = 9B23C1BB208C208E53AC2104 /* Pods-SmartLock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3SAQFVNJ39;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SmartLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -364,6 +374,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdy.SmartLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
