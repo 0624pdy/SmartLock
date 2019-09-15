@@ -10,6 +10,8 @@
 
 #import "WLSubmitButton.h"
 
+#import "WLAddFingerPrintVC.h"  //添加指纹
+
 @interface WLFingerPrintVC ()
 
 @property (weak, nonatomic) IBOutlet UITableView *listView;
@@ -41,8 +43,14 @@
     _btn.btnTitle = @"添加";
     _btn.block_click = ^(id sender) {
         ///TODO: 添加
-        NSLog(@"添加指纹");
+        //NSLog(@"添加指纹");
+        
+        WLAddFingerPrintVC *vc = [[WLAddFingerPrintVC alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     };
+}
+- (void)dealloc {
+    _btn.block_click = nil;
 }
 
 

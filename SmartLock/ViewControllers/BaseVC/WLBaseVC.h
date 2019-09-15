@@ -25,5 +25,6 @@
 
 
 @property (nonatomic,assign) BOOL mg_hideNav;
+@property (nonatomic,assign) BOOL wl_hideNavLine;
 
 @end

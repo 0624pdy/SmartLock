@@ -23,7 +23,16 @@
     
     if (_mg_hideNav) {
         [self.navigationController setNavigationBarHidden:YES animated:NO];
+    } else {
+        if (_wl_hideNavLine) {
+            [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+        } else {
+            [self.navigationController.navigationBar setShadowImage:nil];
+        }
     }
+}
+- (void)dealloc {
+    NSLog(@"dealloc %@", self);
 }
 
 
