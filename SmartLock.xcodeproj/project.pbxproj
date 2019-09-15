@@ -12,6 +12,9 @@
 		006D330B232D556A00C78F70 /* WLBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D330A232D556A00C78F70 /* WLBaseTabBarController.m */; };
 		006D3310232D562300C78F70 /* WLRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D330E232D562300C78F70 /* WLRootVC.m */; };
 		006D3311232D562300C78F70 /* WLRootVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D330F232D562300C78F70 /* WLRootVC.xib */; };
+		006D3317232DE4DD00C78F70 /* WLIndexItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3316232DE4DD00C78F70 /* WLIndexItemView.m */; };
+		006D331C232DE73100C78F70 /* WLIndexItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D331B232DE73100C78F70 /* WLIndexItemView.xib */; };
+		006D3322232DF05A00C78F70 /* MyCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D3321232DF05A00C78F70 /* MyCategory.framework */; };
 		0071F09B232D502200D7C612 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0071F09A232D502200D7C612 /* AppDelegate.m */; };
 		0071F09E232D502200D7C612 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0071F09D232D502200D7C612 /* ViewController.m */; };
 		0071F0A1232D502200D7C612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0071F09F232D502200D7C612 /* Main.storyboard */; };
@@ -31,6 +34,12 @@
 		006D330D232D562300C78F70 /* WLRootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLRootVC.h; sourceTree = "<group>"; };
 		006D330E232D562300C78F70 /* WLRootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLRootVC.m; sourceTree = "<group>"; };
 		006D330F232D562300C78F70 /* WLRootVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLRootVC.xib; sourceTree = "<group>"; };
+		006D3315232DE4DD00C78F70 /* WLIndexItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLIndexItemView.h; sourceTree = "<group>"; };
+		006D3316232DE4DD00C78F70 /* WLIndexItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLIndexItemView.m; sourceTree = "<group>"; };
+		006D331A232DE5E600C78F70 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		006D331B232DE73100C78F70 /* WLIndexItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLIndexItemView.xib; sourceTree = "<group>"; };
+		006D331F232DF04100C78F70 /* MyCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		006D3321232DF05A00C78F70 /* MyCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0071F096232D502200D7C612 /* SmartLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0071F099232D502200D7C612 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0071F09A232D502200D7C612 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006D3322232DF05A00C78F70 /* MyCategory.framework in Frameworks */,
 				9E2A1360D7F98301BE757F86 /* libPods-SmartLock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,8 +110,19 @@
 				006D330D232D562300C78F70 /* WLRootVC.h */,
 				006D330E232D562300C78F70 /* WLRootVC.m */,
 				006D330F232D562300C78F70 /* WLRootVC.xib */,
+				006D3312232DE48100C78F70 /* View */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		006D3312232DE48100C78F70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				006D3315232DE4DD00C78F70 /* WLIndexItemView.h */,
+				006D3316232DE4DD00C78F70 /* WLIndexItemView.m */,
+				006D331B232DE73100C78F70 /* WLIndexItemView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0071F08D232D502100D7C612 = {
@@ -145,6 +166,7 @@
 				0071F0A4232D502300D7C612 /* LaunchScreen.storyboard */,
 				0071F0A7232D502300D7C612 /* Info.plist */,
 				0071F0A8232D502300D7C612 /* main.m */,
+				006D331A232DE5E600C78F70 /* PrefixHeader.pch */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -161,6 +183,8 @@
 		CD658F4F8D75AED5338FE2FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				006D3321232DF05A00C78F70 /* MyCategory.framework */,
+				006D331F232DF04100C78F70 /* MyCategory.framework */,
 				3513D8456711290C9ECBCCB3 /* libPods-SmartLock.a */,
 			);
 			name = Frameworks;
@@ -228,6 +252,7 @@
 				006D3311232D562300C78F70 /* WLRootVC.xib in Resources */,
 				0071F0A3232D502300D7C612 /* Assets.xcassets in Resources */,
 				0071F0A1232D502200D7C612 /* Main.storyboard in Resources */,
+				006D331C232DE73100C78F70 /* WLIndexItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				006D3305232D552800C78F70 /* WLBaseVC.m in Sources */,
+				006D3317232DE4DD00C78F70 /* WLIndexItemView.m in Sources */,
 				0071F09E232D502200D7C612 /* ViewController.m in Sources */,
 				006D3308232D554F00C78F70 /* WLBaseNavController.m in Sources */,
 				006D330B232D556A00C78F70 /* WLBaseTabBarController.m in Sources */,
@@ -415,10 +441,33 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SmartLock",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SmartLock/PrefixHeader.pch;
 				INFOPLIST_FILE = SmartLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdy.SmartLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,10 +484,33 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SmartLock",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SmartLock/PrefixHeader.pch;
 				INFOPLIST_FILE = SmartLock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdy.SmartLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
