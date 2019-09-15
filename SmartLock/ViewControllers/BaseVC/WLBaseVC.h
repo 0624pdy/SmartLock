@@ -8,10 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import "MGBaseVCProtocol.h"
+
+#import "NSArray+MGListViewDatasourse.h"
 
 @interface WLBaseVC : UIViewController
+<
+    UITableViewDataSource, UITableViewDelegate
+    , UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+    , MGBaseVCProtocol
+>
+
+@property (nonatomic,strong) NSMutableArray *rootDatas;
+@property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong) UICollectionView *collectionView;
+
+
+@property (nonatomic,assign) BOOL mg_hideNav;
 
 @end
-
-NS_ASSUME_NONNULL_END

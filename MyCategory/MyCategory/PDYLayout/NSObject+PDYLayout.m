@@ -23,14 +23,44 @@
 @implementation NSObject (PDYLayout_Common)
 
 RuntimeProperty_imp_Obj_(dy_obj, setDy_obj, id, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+
+RuntimeProperty_imp_Obj_(dy_imageName, setDy_imageName, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_image, setDy_image, NSString *, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_imageURL, setDy_imageURL, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+
 RuntimeProperty_imp_Obj_(dy_title, setDy_title, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_subtitle, setDy_subtitle, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
 RuntimeProperty_imp_Obj_(dy_desc, setDy_desc, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+
 RuntimeProperty_imp_Obj_(dy_iden, setDy_iden, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_cellIden, setDy_cellIden, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_cellIden_1, setDy_cellIden_1, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+
+RuntimeProperty_imp_Obj_(dy_headerIden, setDy_headerIden, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_headerIden_1, setDy_headerIden_1, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+
+RuntimeProperty_imp_Obj_(dy_footerIden, setDy_footerIden, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_footerIden_1, setDy_footerIden_1, NSString *, OBJC_ASSOCIATION_COPY_NONATOMIC)
+
+RuntimeProperty_imp_Obj_(dy_selectedArray, setDy_selectedArray, NSMutableArray *, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_selectedDic, setDy_selectedDic, NSMutableDictionary *, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_selectedObj, setDy_selectedObj, id, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_emptyObj, setDy_emptyObj, id, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+RuntimeProperty_imp_Obj_(dy_addItem, setDy_addItem, id, OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+
+
 RuntimeProperty_imp_NonObj_(dy_index, setDy_index, NSInteger)
+RuntimeProperty_imp_NonObj_(dy_Integer, setDy_Integer, NSInteger)
+RuntimeProperty_imp_NonObj_(dy_int, setDy_int, int)
 
 RuntimeProperty_imp_NonObj_(dy_flag, setDy_flag, BOOL)
 RuntimeProperty_imp_NonObj_(dy_selected, setDy_selected, BOOL)
 RuntimeProperty_imp_NonObj_(dy_active, setDy_active, BOOL)
+RuntimeProperty_imp_NonObj_(dy_bool0, setDy_bool0, BOOL)
+RuntimeProperty_imp_NonObj_(dy_bool1, setDy_bool1, BOOL)
+RuntimeProperty_imp_NonObj_(dy_bool2, setDy_bool2, BOOL)
+
+
 
 + (instancetype)pri_objWithModel:(id)aModel title:(NSString *)title desc:(NSString *)desc iden:(NSString *)iden actionIndex:(NSInteger)actionIndex {
     NSObject *model = [[NSObject alloc] init];
@@ -64,6 +94,50 @@ RuntimeProperty_imp_NonObj_(dy_active, setDy_active, BOOL)
 }
 - (void)withTitle:(NSString *)title desc:(NSString *)desc actionIndex:(NSInteger)actionIndex {
     [self withTitle:title desc:desc iden:nil actionIndex:actionIndex];
+}
+
++ (instancetype)objWithImage:(id)image title:(NSString *)title index:(NSInteger)index {
+    NSObject *obj = [[NSObject alloc] init];
+    
+    if ([image isKindOfClass:[UIImage class]]) {
+        obj.dy_image = image;
+    } else if ([image isKindOfClass:[NSString class]]) {
+        
+        NSString *str = (NSString *)image;
+        
+        if ([str hasPrefix:@"http"]) {
+            obj.dy_imageURL = str;
+        } else {
+            obj.dy_imageName = str;
+        }
+    } else {
+        
+    }
+    
+    obj.dy_title = title;
+    obj.dy_index = index;
+    
+    return obj;
+}
+- (void)withImage:(id)image title:(NSString *)title index:(NSInteger)index {
+    
+    if ([image isKindOfClass:[UIImage class]]) {
+        self.dy_image = image;
+    } else if ([image isKindOfClass:[NSString class]]) {
+        
+        NSString *str = (NSString *)image;
+        
+        if ([str hasPrefix:@"http"]) {
+            self.dy_imageURL = str;
+        } else {
+            self.dy_imageName = str;
+        }
+    } else {
+        
+    }
+    
+    self.dy_title = title;
+    self.dy_index = index;
 }
 
 @end
@@ -149,16 +223,16 @@ RuntimeProperty_imp_NonObj_(lineSpace, setLineSpace, CGFloat)
 
 - (void)pri_initialzeBlocks {
     
-//    __weak __typeof(self) weakSelf = self;
-//
-//    self.dy_setHeaderTitle = ^NSArray *(NSString *text) {
-//        weakSelf.headerTitle = text;
-//        return weakSelf;
-//    };
-//    self.dy_setHeaderIden = ^NSArray *(NSString *text) {
-//        weakSelf.headerIden = text;
-//        return weakSelf;
-//    };
+    //    __weak __typeof(self) weakSelf = self;
+    //
+    //    self.dy_setHeaderTitle = ^NSArray *(NSString *text) {
+    //        weakSelf.headerTitle = text;
+    //        return weakSelf;
+    //    };
+    //    self.dy_setHeaderIden = ^NSArray *(NSString *text) {
+    //        weakSelf.headerIden = text;
+    //        return weakSelf;
+    //    };
 }
 
 @end

@@ -19,6 +19,22 @@
 - (void)mg_registerFooterClasses:(NSArray<NSString *> *)classNames;
 - (void)mg_registerFooterNibs:(NSArray<NSString *> *)nibNames;
 
+/**
+ *  注册默认视图
+ */
+- (void)mg_registerDefaultViews;
+
+@property (nonatomic,assign) CGFloat mg_headerHeight;
+- (CGFloat)mg_headerHeight UNAVAILABLE_ATTRIBUTE;
+@property (nonatomic,assign) CGFloat mg_footerHeight;
+- (CGFloat)mg_footerHeight UNAVAILABLE_ATTRIBUTE;
+
+@property (nonatomic,assign) CGFloat mg_estimatedHeight;
+- (CGFloat)mg_estimatedHeight UNAVAILABLE_ATTRIBUTE;
+
+@property (nonatomic,assign) BOOL mg_adjustContentInsets;
+- (BOOL)mg_adjustContentInsets UNAVAILABLE_ATTRIBUTE;
+
 @end
 
 @interface UITableViewCell (PDYLayout)

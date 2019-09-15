@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLRootVC">
             <connections>
+                <outlet property="item_fingerPrint" destination="v83-mq-IfO" id="d0g-YN-WTd"/>
+                <outlet property="item_password" destination="HzV-RN-VUv" id="ET5-Zh-qmS"/>
+                <outlet property="item_settings" destination="8gt-ry-ZME" id="1bC-xi-rGy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -83,7 +86,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="2Dc-lM-6bC" secondAttribute="bottom" id="x53-a9-3R3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-124" y="54"/>
+            <point key="canvasLocation" x="-214" y="155"/>
         </view>
     </objects>
 </document>

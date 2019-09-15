@@ -113,6 +113,12 @@
 
 
 
+#pragma mark -
+
+#define WeakSelf(weakSelf)    __weak __typeof__(self) weakSelf = self;
+
+
+
 #pragma mark - 设备尺寸、型号
 
 typedef NS_ENUM(NSInteger, WLScreenInch) {
