@@ -13,6 +13,7 @@
 @interface WLAddFingerPrintVC_Step2 ()
 
 @property (weak, nonatomic) IBOutlet WLSubmitButton *btn;
+
 @end
 
 @implementation WLAddFingerPrintVC_Step2
