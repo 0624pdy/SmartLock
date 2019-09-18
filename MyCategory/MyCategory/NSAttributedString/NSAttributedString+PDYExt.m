@@ -88,24 +88,7 @@
     [self  wl_setLineSpace:-1 paragraphSpace:wl_paragraphSpace];
 }
 - (void)wl_setLineSpace:(CGFloat)lineSpace paragraphSpace:(CGFloat)paragraphSpace {
-    if (self.text.length > 0) {
-        
-        NSMutableAttributedString *attr = [NSAttributedString wl_attrWithString:self.text font:self.font color:self.textColor others:nil].mutableCopy;
-        NSRange range = NSMakeRange(0, attr.length);
-        
-        NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
-        if (lineSpace >= 0) {
-            style.lineSpacing       = lineSpace;
-        }
-        if (paragraphSpace >= 0) {
-            style.paragraphSpacing  = paragraphSpace;
-        }
-        [attr addAttribute:NSParagraphStyleAttributeName value:style range:range];
-        
-        self.text = nil;
-        self.attributedText = attr;
-    
-    } else if (self.attributedText) {
+    if (self.attributedText) {
         
         NSMutableAttributedString *attr = [self.attributedText mutableCopy];
         NSRange range = NSMakeRange(0, attr.length);
@@ -121,6 +104,28 @@
         
         self.text = nil;
         self.attributedText = attr;
+        
+    } else if (self.text.length > 0) {
+        
+        NSMutableAttributedString *attr =
+        [NSAttributedString wl_attrWithString:self.text
+                                         font:self.font
+                                        color:self.textColor
+                                       others:nil].mutableCopy;
+        NSRange range = NSMakeRange(0, attr.length);
+        
+        NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+        if (lineSpace >= 0) {
+            style.lineSpacing       = lineSpace;
+        }
+        if (paragraphSpace >= 0) {
+            style.paragraphSpacing  = paragraphSpace;
+        }
+        [attr addAttribute:NSParagraphStyleAttributeName value:style range:range];
+        
+        self.text = nil;
+        self.attributedText = attr;
+    
     }
 }
 

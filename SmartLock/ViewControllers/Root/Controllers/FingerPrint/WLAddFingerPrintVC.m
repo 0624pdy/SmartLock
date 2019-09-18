@@ -8,7 +8,7 @@
 
 #import "WLAddFingerPrintVC.h"
 
-#import "WLAddFingerPrintVC_Step2.h"    //
+#import "WLFingerPrintValidateVC.h"    //
 
 @interface WLAddFingerPrintVC ()
 
@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet WLSubmitButton *btn;
 
 
-@property (nonatomic,assign) WLFingerPrintEditType type;
 @property (nonatomic,assign) BOOL isEdit;
 
 @end
@@ -29,10 +28,9 @@
     // Do any additional setup after loading the view from its nib.
     
     WeakSelf(weakSelf)
-    self.type = (_name ? WLFingerPrintEditType_Edit : WLFingerPrintEditType_Add);
-    _isEdit = (_type == WLFingerPrintEditType_Edit);
+    _isEdit = (_model != nil);
     
-    self.navigationItem.title = @{ @"0":@"添加指纹", @"1":@"修改指纹" }[@(self.type).stringValue];
+    self.navigationItem.title = @{ @"0":@"添加指纹", @"1":@"修改指纹" }[@(_isEdit).stringValue];
     
     _listView.backgroundColor = RGB(245, 245, 245);
     _listView.separatorColor = WLColor_(225);
@@ -45,17 +43,23 @@
     _btn.btnTitle = (_isEdit ? @"确认" : @"下一步");
     _btn.block_click = ^(id sender) {
         
-        NSString *name = weakSelf.field.text;
+        weakSelf.model.name = weakSelf.field.text;
         
-        ///TODO: 下一步
-        WLAddFingerPrintVC_Step2 *vc = [[WLAddFingerPrintVC_Step2 alloc] init];
-        vc.printName = name;
-        [self.navigationController pushViewController:vc animated:YES];
+        if (weakSelf.isEdit) {
+            ///TODO: 确认
+            [weakSelf.navigationController popViewControllerAnimated:YES];
+        } else {
+            ///TODO: 下一步
+            WLFingerPrintValidateVC *vc = [[WLFingerPrintValidateVC alloc] init];
+            vc.model = weakSelf.model;
+            vc.optType = WLFingerPrintOptType_Add;
+            [weakSelf.navigationController pushViewController:vc animated:YES];
+        }
     };
     
     
-    if (_name) {
-        _field.text = _name;
+    if (_model) {
+        _field.text = _model.name;
     }
     _btn.bgStyle = (_field.text.length > 0 ? DYBgStyle_EnabledGradient : DYBgStyle_DisabledNormal);
 }

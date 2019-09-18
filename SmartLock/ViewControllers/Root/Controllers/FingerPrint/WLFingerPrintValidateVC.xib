@@ -10,9 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLAddFingerPrintVC_Step2">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLFingerPrintValidateVC">
             <connections>
                 <outlet property="btn" destination="XqF-vm-5vR" id="o9q-Dv-u7l"/>
+                <outlet property="lbl" destination="Qsj-bo-yHF" id="Y7J-Xv-3vb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,8 +29,8 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请将手指放至在图示区域" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-bo-yHF">
-                    <rect key="frame" x="97.5" y="541" width="180" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请将手指放至在图示区域" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-bo-yHF">
+                    <rect key="frame" x="16" y="541.5" width="343" height="19.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -46,10 +47,11 @@
             <constraints>
                 <constraint firstItem="4hf-TS-MXF" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="8vp-qq-AS6"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="XqF-vm-5vR" secondAttribute="trailing" constant="24" id="APi-Da-QtS"/>
-                <constraint firstItem="XqF-vm-5vR" firstAttribute="centerX" secondItem="Qsj-bo-yHF" secondAttribute="centerX" id="HVb-aT-L9s"/>
+                <constraint firstItem="Qsj-bo-yHF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="O8J-wc-2J8"/>
                 <constraint firstItem="XqF-vm-5vR" firstAttribute="top" secondItem="Qsj-bo-yHF" secondAttribute="bottom" constant="20" id="Srw-F5-N6b"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="XqF-vm-5vR" secondAttribute="bottom" constant="36" id="TLz-2o-4fJ"/>
                 <constraint firstItem="4hf-TS-MXF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="35" id="V3l-eM-ICp"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Qsj-bo-yHF" secondAttribute="trailing" constant="16" id="aF3-wm-DSl"/>
                 <constraint firstItem="XqF-vm-5vR" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="w7P-it-4M7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

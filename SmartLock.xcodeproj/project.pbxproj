@@ -41,8 +41,8 @@
 		006D333D232E1F5100C78F70 /* WLSubmitButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D333C232E1F5100C78F70 /* WLSubmitButton.m */; };
 		006D3342232E27A300C78F70 /* WLAddFingerPrintVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3340232E27A300C78F70 /* WLAddFingerPrintVC.m */; };
 		006D3343232E27A300C78F70 /* WLAddFingerPrintVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D3341232E27A300C78F70 /* WLAddFingerPrintVC.xib */; };
-		006D3347232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3345232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.m */; };
-		006D3348232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D3346232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.xib */; };
+		006D3347232E30AF00C78F70 /* WLFingerPrintValidateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3345232E30AF00C78F70 /* WLFingerPrintValidateVC.m */; };
+		006D3348232E30AF00C78F70 /* WLFingerPrintValidateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D3346232E30AF00C78F70 /* WLFingerPrintValidateVC.xib */; };
 		0071F09B232D502200D7C612 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0071F09A232D502200D7C612 /* AppDelegate.m */; };
 		0071F09E232D502200D7C612 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0071F09D232D502200D7C612 /* ViewController.m */; };
 		0071F0A1232D502200D7C612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0071F09F232D502200D7C612 /* Main.storyboard */; };
@@ -115,9 +115,9 @@
 		006D333F232E27A300C78F70 /* WLAddFingerPrintVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLAddFingerPrintVC.h; sourceTree = "<group>"; };
 		006D3340232E27A300C78F70 /* WLAddFingerPrintVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLAddFingerPrintVC.m; sourceTree = "<group>"; };
 		006D3341232E27A300C78F70 /* WLAddFingerPrintVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLAddFingerPrintVC.xib; sourceTree = "<group>"; };
-		006D3344232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLAddFingerPrintVC_Step2.h; sourceTree = "<group>"; };
-		006D3345232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLAddFingerPrintVC_Step2.m; sourceTree = "<group>"; };
-		006D3346232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLAddFingerPrintVC_Step2.xib; sourceTree = "<group>"; };
+		006D3344232E30AF00C78F70 /* WLFingerPrintValidateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFingerPrintValidateVC.h; sourceTree = "<group>"; };
+		006D3345232E30AF00C78F70 /* WLFingerPrintValidateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFingerPrintValidateVC.m; sourceTree = "<group>"; };
+		006D3346232E30AF00C78F70 /* WLFingerPrintValidateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLFingerPrintValidateVC.xib; sourceTree = "<group>"; };
 		0071F096232D502200D7C612 /* SmartLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0071F099232D502200D7C612 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0071F09A232D502200D7C612 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -289,9 +289,9 @@
 				006D333F232E27A300C78F70 /* WLAddFingerPrintVC.h */,
 				006D3340232E27A300C78F70 /* WLAddFingerPrintVC.m */,
 				006D3341232E27A300C78F70 /* WLAddFingerPrintVC.xib */,
-				006D3344232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.h */,
-				006D3345232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.m */,
-				006D3346232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.xib */,
+				006D3344232E30AF00C78F70 /* WLFingerPrintValidateVC.h */,
+				006D3345232E30AF00C78F70 /* WLFingerPrintValidateVC.m */,
+				006D3346232E30AF00C78F70 /* WLFingerPrintValidateVC.xib */,
 			);
 			path = FingerPrint;
 			sourceTree = "<group>";
@@ -471,7 +471,7 @@
 				006D3335232DFB3B00C78F70 /* WLSettingsVC.xib in Resources */,
 				0031BE4523321833008B9790 /* WLFingerPrintDetailVC.xib in Resources */,
 				006D331C232DE73100C78F70 /* WLIndexItemView.xib in Resources */,
-				006D3348232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.xib in Resources */,
+				006D3348232E30AF00C78F70 /* WLFingerPrintValidateVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +521,7 @@
 				0031BE4423321833008B9790 /* WLFingerPrintDetailVC.m in Sources */,
 				006D3308232D554F00C78F70 /* WLBaseNavController.m in Sources */,
 				0031BE4D23321DB0008B9790 /* WLFingerPrint.m in Sources */,
-				006D3347232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.m in Sources */,
+				006D3347232E30AF00C78F70 /* WLFingerPrintValidateVC.m in Sources */,
 				0031BE2E233201EC008B9790 /* WLSettingsVC_Shake.m in Sources */,
 				006D330B232D556A00C78F70 /* WLBaseTabBarController.m in Sources */,
 				0031BE3F23320EDE008B9790 /* WLIndexVC.m in Sources */,

@@ -17,9 +17,10 @@ typedef NS_ENUM(NSInteger, WLCellAccessoryType) {
     WLCellAccessoryType_Switch  = 2,
     WLCellAccessoryType_Custom  = 100,
 };
-typedef NS_ENUM(NSInteger, WLFingerPrintEditType) {
-    WLFingerPrintEditType_Add   = 0,    //添加指纹
-    WLFingerPrintEditType_Edit  = 1,    //编辑指纹
+typedef NS_ENUM(NSInteger, WLFingerPrintOptType) {
+    WLFingerPrintOptType_Add    = 0,    //添加指纹
+    WLFingerPrintOptType_Reset  = 1,    //重录指纹
+    WLFingerPrintOptType_Verify = 2,    //校验指纹
 };
 
 

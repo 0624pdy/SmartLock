@@ -10,4 +10,6 @@
 
 @interface WLFingerPrintDetailVC : WLBaseVC
 
+@property (nonatomic,strong) WLFingerPrint *model;
+
 @end

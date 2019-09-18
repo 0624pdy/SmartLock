@@ -9,11 +9,9 @@
 #import "WLFingerPrintDetailVC.h"
 
 #import "WLAddFingerPrintVC.h"          //修改名称
-#import "WLAddFingerPrintVC_Step2.h"    //重录指纹
+#import "WLFingerPrintValidateVC.h"     //重录指纹
 
 @interface WLFingerPrintDetailVC ()
-
-@property (nonatomic,strong) NSObject *model;
 
 @property (weak, nonatomic) IBOutlet UITableView *listView;
 
@@ -25,14 +23,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    _model = (NSObject *)self.dy_obj;
-    
-    self.navigationItem.title = _model.dy_title;
+    self.navigationItem.title = _model.name;
     
     
     _listView.backgroundColor   = WLColor_245;
     _listView.separatorColor    = WLColor_(225);
     self.tableView = _listView;
+    
     
     NSObject *row_0 = [NSObject objWithTitle:@"修改名称" desc:nil actionIndex:0];
     NSObject *row_1 = [NSObject objWithTitle:@"重录指纹" desc:nil actionIndex:1];
@@ -42,6 +39,11 @@
     sec_0.dy_rowHeight = 50;
     sec_0.dy_cellIden = UITableViewCell.dy_name;
     [self.rootDatas addObject:sec_0];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.title = _model.name;
 }
 
 
@@ -62,12 +64,14 @@
     if (row.dy_index == 0) {
         //修改名称
         WLAddFingerPrintVC *vc = [[WLAddFingerPrintVC alloc] init];
-        vc.name = row.dy_title;
+        vc.model = _model;
         [self.navigationController pushViewController:vc animated:YES];
     }
     else if (row.dy_index == 1) {
         //重录指纹
-        WLAddFingerPrintVC_Step2 *vc = [[WLAddFingerPrintVC_Step2 alloc] init];
+        WLFingerPrintValidateVC *vc = [[WLFingerPrintValidateVC alloc] init];
+        vc.model = _model;
+        vc.optType = (arc4random() % 3);//WLFingerPrintOptType_Reset;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
