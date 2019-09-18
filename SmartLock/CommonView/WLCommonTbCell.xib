@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" id="KGk-i7-Jjw" customClass="WLCommonTbCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGw-fv-jnB">
+                        <rect key="frame" x="16" y="12" width="39.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-Of-hcu">
+                        <rect key="frame" x="236" y="7" width="50" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="EyL-1K-q1O"/>
+                            <constraint firstAttribute="height" constant="30" id="F8G-rg-kHL"/>
+                        </constraints>
+                    </view>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAW-a3-nwL">
+                        <rect key="frame" x="237" y="6.5" width="51" height="31"/>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyk-Ee-w7j">
+                        <rect key="frame" x="63.5" y="12" width="222.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kyk-Ee-w7j" firstAttribute="centerY" secondItem="KGw-fv-jnB" secondAttribute="centerY" id="6IU-is-oF4"/>
+                    <constraint firstItem="EAW-a3-nwL" firstAttribute="centerY" secondItem="KGw-fv-jnB" secondAttribute="centerY" id="Ap9-z5-iF2"/>
+                    <constraint firstItem="c0N-Of-hcu" firstAttribute="trailing" secondItem="kyk-Ee-w7j" secondAttribute="trailing" id="TST-N9-guz"/>
+                    <constraint firstAttribute="trailing" secondItem="kyk-Ee-w7j" secondAttribute="trailing" id="TTm-eE-xT7"/>
+                    <constraint firstItem="kyk-Ee-w7j" firstAttribute="leading" secondItem="KGw-fv-jnB" secondAttribute="trailing" constant="8" id="cqB-0i-Lot"/>
+                    <constraint firstItem="c0N-Of-hcu" firstAttribute="centerY" secondItem="KGw-fv-jnB" secondAttribute="centerY" id="ej6-lW-4qY"/>
+                    <constraint firstItem="KGw-fv-jnB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="iJu-09-doX"/>
+                    <constraint firstItem="KGw-fv-jnB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oID-7c-LV5"/>
+                    <constraint firstItem="EAW-a3-nwL" firstAttribute="trailing" secondItem="kyk-Ee-w7j" secondAttribute="trailing" id="x01-Mt-AUn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="cons_cusView_H" destination="F8G-rg-kHL" id="tNX-fp-8ky"/>
+                <outlet property="cons_cusView_W" destination="EyL-1K-q1O" id="5hJ-il-qAV"/>
+                <outlet property="cons_lblR_R" destination="TTm-eE-xT7" id="Dlm-F2-PZF"/>
+                <outlet property="cusView" destination="c0N-Of-hcu" id="rda-XA-U4d"/>
+                <outlet property="lbl_left" destination="KGw-fv-jnB" id="2Nl-fy-cr8"/>
+                <outlet property="lbl_right" destination="kyk-Ee-w7j" id="3Nk-W0-oOI"/>
+                <outlet property="theSwitch" destination="EAW-a3-nwL" id="bLf-CE-tDn"/>
+            </connections>
+            <point key="canvasLocation" x="-929" y="-2"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,13 +1,13 @@
 //
-//  WLFingerPrintVC.h
+//  WLSettingsVC_Volumn.h
 //  SmartLock
 //
-//  Created by MG_PDY on 2019/9/15.
+//  Created by MG_PDY on 2019/9/18.
 //  Copyright © 2019 彭端阳. All rights reserved.
 //
 
 #import "WLBaseVC.h"
 
-@interface WLFingerPrintVC : WLBaseVC
+@interface WLSettingsVC_Volumn : WLBaseVC
 
 @end

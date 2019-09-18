@@ -32,6 +32,8 @@
     [self.titleLabel setFont:WLFont_Regular(16)];
     [self mg_configBg:^DYBgStyle(UIView *theView) {
         theView.mg_enabledColors = @[ RGBA(92, 159, 254, 1), RGBA(125, 133, 253, 1) ];
+        theView.mg_disabledColor = RGBA(216, 216, 216, 1);
+        
         return DYBgStyle_EnabledGradient;
     }];
     

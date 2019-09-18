@@ -8,8 +8,6 @@
 
 #import "WLAddFingerPrintVC_Step2.h"
 
-#import "WLSubmitButton.h"
-
 @interface WLAddFingerPrintVC_Step2 ()
 
 @property (weak, nonatomic) IBOutlet WLSubmitButton *btn;

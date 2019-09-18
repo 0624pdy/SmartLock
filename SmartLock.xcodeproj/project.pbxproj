@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0031BE222331E226008B9790 /* WLCommonTbCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE202331E226008B9790 /* WLCommonTbCell.m */; };
+		0031BE232331E226008B9790 /* WLCommonTbCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0031BE212331E226008B9790 /* WLCommonTbCell.xib */; };
+		0031BE29233201C7008B9790 /* WLSettingsVC_Volumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE27233201C7008B9790 /* WLSettingsVC_Volumn.m */; };
+		0031BE2A233201C7008B9790 /* WLSettingsVC_Volumn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0031BE28233201C7008B9790 /* WLSettingsVC_Volumn.xib */; };
+		0031BE2E233201EC008B9790 /* WLSettingsVC_Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE2C233201EC008B9790 /* WLSettingsVC_Shake.m */; };
+		0031BE2F233201EC008B9790 /* WLSettingsVC_Shake.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0031BE2D233201EC008B9790 /* WLSettingsVC_Shake.xib */; };
+		0031BE33233206D6008B9790 /* WLSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE32233206D6008B9790 /* WLSettingsManager.m */; };
+		0031BE3A23320D86008B9790 /* WLVersionInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE3823320D86008B9790 /* WLVersionInfoVC.m */; };
+		0031BE3B23320D86008B9790 /* WLVersionInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0031BE3923320D86008B9790 /* WLVersionInfoVC.xib */; };
+		0031BE3F23320EDE008B9790 /* WLIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE3D23320EDE008B9790 /* WLIndexVC.m */; };
+		0031BE4023320EDE008B9790 /* WLIndexVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0031BE3E23320EDE008B9790 /* WLIndexVC.xib */; };
+		0031BE4423321833008B9790 /* WLFingerPrintDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE4223321833008B9790 /* WLFingerPrintDetailVC.m */; };
+		0031BE4523321833008B9790 /* WLFingerPrintDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0031BE4323321833008B9790 /* WLFingerPrintDetailVC.xib */; };
+		0031BE4823321BF9008B9790 /* UITableView+Tap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE4723321BF9008B9790 /* UITableView+Tap.m */; };
+		0031BE4D23321DB0008B9790 /* WLFingerPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE4C23321DB0008B9790 /* WLFingerPrint.m */; };
+		0031BE5223321F20008B9790 /* WLDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE5123321F20008B9790 /* WLDataManager.m */; };
 		006D3305232D552800C78F70 /* WLBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3304232D552800C78F70 /* WLBaseVC.m */; };
 		006D3308232D554F00C78F70 /* WLBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3307232D554F00C78F70 /* WLBaseNavController.m */; };
 		006D330B232D556A00C78F70 /* WLBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D330A232D556A00C78F70 /* WLBaseTabBarController.m */; };
@@ -15,8 +31,8 @@
 		006D3317232DE4DD00C78F70 /* WLIndexItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3316232DE4DD00C78F70 /* WLIndexItemView.m */; };
 		006D331C232DE73100C78F70 /* WLIndexItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D331B232DE73100C78F70 /* WLIndexItemView.xib */; };
 		006D3322232DF05A00C78F70 /* MyCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D3321232DF05A00C78F70 /* MyCategory.framework */; };
-		006D3328232DFA9200C78F70 /* WLFingerPrintVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3326232DFA9200C78F70 /* WLFingerPrintVC.m */; };
-		006D3329232DFA9200C78F70 /* WLFingerPrintVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D3327232DFA9200C78F70 /* WLFingerPrintVC.xib */; };
+		006D3328232DFA9200C78F70 /* WLFingerPrintListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3326232DFA9200C78F70 /* WLFingerPrintListVC.m */; };
+		006D3329232DFA9200C78F70 /* WLFingerPrintListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D3327232DFA9200C78F70 /* WLFingerPrintListVC.xib */; };
 		006D332E232DFAAE00C78F70 /* WLPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D332C232DFAAE00C78F70 /* WLPasswordVC.m */; };
 		006D332F232DFAAE00C78F70 /* WLPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006D332D232DFAAE00C78F70 /* WLPasswordVC.xib */; };
 		006D3334232DFB3B00C78F70 /* WLSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 006D3332232DFB3B00C78F70 /* WLSettingsVC.m */; };
@@ -37,6 +53,36 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0031BE1E2331E1A3008B9790 /* WLDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLDefines.h; sourceTree = "<group>"; };
+		0031BE1F2331E226008B9790 /* WLCommonTbCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLCommonTbCell.h; sourceTree = "<group>"; };
+		0031BE202331E226008B9790 /* WLCommonTbCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLCommonTbCell.m; sourceTree = "<group>"; };
+		0031BE212331E226008B9790 /* WLCommonTbCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLCommonTbCell.xib; sourceTree = "<group>"; };
+		0031BE242331FC94008B9790 /* WLCommonViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLCommonViewHeader.h; sourceTree = "<group>"; };
+		0031BE26233201C7008B9790 /* WLSettingsVC_Volumn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLSettingsVC_Volumn.h; sourceTree = "<group>"; };
+		0031BE27233201C7008B9790 /* WLSettingsVC_Volumn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLSettingsVC_Volumn.m; sourceTree = "<group>"; };
+		0031BE28233201C7008B9790 /* WLSettingsVC_Volumn.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLSettingsVC_Volumn.xib; sourceTree = "<group>"; };
+		0031BE2B233201EC008B9790 /* WLSettingsVC_Shake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLSettingsVC_Shake.h; sourceTree = "<group>"; };
+		0031BE2C233201EC008B9790 /* WLSettingsVC_Shake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLSettingsVC_Shake.m; sourceTree = "<group>"; };
+		0031BE2D233201EC008B9790 /* WLSettingsVC_Shake.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLSettingsVC_Shake.xib; sourceTree = "<group>"; };
+		0031BE31233206D6008B9790 /* WLSettingsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLSettingsManager.h; sourceTree = "<group>"; };
+		0031BE32233206D6008B9790 /* WLSettingsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLSettingsManager.m; sourceTree = "<group>"; };
+		0031BE3523320731008B9790 /* WLToolsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLToolsHeader.h; sourceTree = "<group>"; };
+		0031BE3723320D86008B9790 /* WLVersionInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLVersionInfoVC.h; sourceTree = "<group>"; };
+		0031BE3823320D86008B9790 /* WLVersionInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLVersionInfoVC.m; sourceTree = "<group>"; };
+		0031BE3923320D86008B9790 /* WLVersionInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLVersionInfoVC.xib; sourceTree = "<group>"; };
+		0031BE3C23320EDE008B9790 /* WLIndexVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLIndexVC.h; sourceTree = "<group>"; };
+		0031BE3D23320EDE008B9790 /* WLIndexVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLIndexVC.m; sourceTree = "<group>"; };
+		0031BE3E23320EDE008B9790 /* WLIndexVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLIndexVC.xib; sourceTree = "<group>"; };
+		0031BE4123321833008B9790 /* WLFingerPrintDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFingerPrintDetailVC.h; sourceTree = "<group>"; };
+		0031BE4223321833008B9790 /* WLFingerPrintDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFingerPrintDetailVC.m; sourceTree = "<group>"; };
+		0031BE4323321833008B9790 /* WLFingerPrintDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLFingerPrintDetailVC.xib; sourceTree = "<group>"; };
+		0031BE4623321BF9008B9790 /* UITableView+Tap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Tap.h"; sourceTree = "<group>"; };
+		0031BE4723321BF9008B9790 /* UITableView+Tap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Tap.m"; sourceTree = "<group>"; };
+		0031BE4B23321DB0008B9790 /* WLFingerPrint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFingerPrint.h; sourceTree = "<group>"; };
+		0031BE4C23321DB0008B9790 /* WLFingerPrint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFingerPrint.m; sourceTree = "<group>"; };
+		0031BE4E23321E37008B9790 /* WLModelsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLModelsHeader.h; sourceTree = "<group>"; };
+		0031BE5023321F20008B9790 /* WLDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLDataManager.h; sourceTree = "<group>"; };
+		0031BE5123321F20008B9790 /* WLDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLDataManager.m; sourceTree = "<group>"; };
 		006D3303232D552800C78F70 /* WLBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLBaseVC.h; sourceTree = "<group>"; };
 		006D3304232D552800C78F70 /* WLBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLBaseVC.m; sourceTree = "<group>"; };
 		006D3306232D554F00C78F70 /* WLBaseNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLBaseNavController.h; sourceTree = "<group>"; };
@@ -52,9 +98,9 @@
 		006D331B232DE73100C78F70 /* WLIndexItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLIndexItemView.xib; sourceTree = "<group>"; };
 		006D331F232DF04100C78F70 /* MyCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		006D3321232DF05A00C78F70 /* MyCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		006D3325232DFA9200C78F70 /* WLFingerPrintVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFingerPrintVC.h; sourceTree = "<group>"; };
-		006D3326232DFA9200C78F70 /* WLFingerPrintVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFingerPrintVC.m; sourceTree = "<group>"; };
-		006D3327232DFA9200C78F70 /* WLFingerPrintVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLFingerPrintVC.xib; sourceTree = "<group>"; };
+		006D3325232DFA9200C78F70 /* WLFingerPrintListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFingerPrintListVC.h; sourceTree = "<group>"; };
+		006D3326232DFA9200C78F70 /* WLFingerPrintListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFingerPrintListVC.m; sourceTree = "<group>"; };
+		006D3327232DFA9200C78F70 /* WLFingerPrintListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLFingerPrintListVC.xib; sourceTree = "<group>"; };
 		006D332B232DFAAE00C78F70 /* WLPasswordVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLPasswordVC.h; sourceTree = "<group>"; };
 		006D332C232DFAAE00C78F70 /* WLPasswordVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLPasswordVC.m; sourceTree = "<group>"; };
 		006D332D232DFAAE00C78F70 /* WLPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLPasswordVC.xib; sourceTree = "<group>"; };
@@ -100,6 +146,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0031BE252332019E008B9790 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0031BE26233201C7008B9790 /* WLSettingsVC_Volumn.h */,
+				0031BE27233201C7008B9790 /* WLSettingsVC_Volumn.m */,
+				0031BE28233201C7008B9790 /* WLSettingsVC_Volumn.xib */,
+				0031BE2B233201EC008B9790 /* WLSettingsVC_Shake.h */,
+				0031BE2C233201EC008B9790 /* WLSettingsVC_Shake.m */,
+				0031BE2D233201EC008B9790 /* WLSettingsVC_Shake.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0031BE30233206BE008B9790 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0031BE3523320731008B9790 /* WLToolsHeader.h */,
+				0031BE4623321BF9008B9790 /* UITableView+Tap.h */,
+				0031BE4723321BF9008B9790 /* UITableView+Tap.m */,
+				0031BE4F23321F07008B9790 /* WLDataManager */,
+				0031BE34233206DF008B9790 /* WLSettingsManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0031BE34233206DF008B9790 /* WLSettingsManager */ = {
+			isa = PBXGroup;
+			children = (
+				0031BE31233206D6008B9790 /* WLSettingsManager.h */,
+				0031BE32233206D6008B9790 /* WLSettingsManager.m */,
+			);
+			path = WLSettingsManager;
+			sourceTree = "<group>";
+		};
+		0031BE3623320D65008B9790 /* VersionInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0031BE3723320D86008B9790 /* WLVersionInfoVC.h */,
+				0031BE3823320D86008B9790 /* WLVersionInfoVC.m */,
+				0031BE3923320D86008B9790 /* WLVersionInfoVC.xib */,
+			);
+			path = VersionInfo;
+			sourceTree = "<group>";
+		};
+		0031BE4923321D7F008B9790 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0031BE4E23321E37008B9790 /* WLModelsHeader.h */,
+				0031BE4B23321DB0008B9790 /* WLFingerPrint.h */,
+				0031BE4C23321DB0008B9790 /* WLFingerPrint.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0031BE4F23321F07008B9790 /* WLDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				0031BE5023321F20008B9790 /* WLDataManager.h */,
+				0031BE5123321F20008B9790 /* WLDataManager.m */,
+			);
+			path = WLDataManager;
+			sourceTree = "<group>";
+		};
 		006D32FF232D54B000C78F70 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,17 +216,9 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		006D3300232D54B700C78F70 /* Mnager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mnager;
-			sourceTree = "<group>";
-		};
 		006D3301232D54C000C78F70 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				006D333A232E1F3400C78F70 /* CommonView */,
 				006D330C232D560C00C78F70 /* Root */,
 				006D3302232D550400C78F70 /* BaseVC */,
 			);
@@ -143,6 +244,9 @@
 		006D330C232D560C00C78F70 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				0031BE3C23320EDE008B9790 /* WLIndexVC.h */,
+				0031BE3D23320EDE008B9790 /* WLIndexVC.m */,
+				0031BE3E23320EDE008B9790 /* WLIndexVC.xib */,
 				006D330D232D562300C78F70 /* WLRootVC.h */,
 				006D330E232D562300C78F70 /* WLRootVC.m */,
 				006D330F232D562300C78F70 /* WLRootVC.xib */,
@@ -165,6 +269,7 @@
 		006D3323232DFA5B00C78F70 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0031BE3623320D65008B9790 /* VersionInfo */,
 				006D3324232DFA7100C78F70 /* FingerPrint */,
 				006D332A232DFA9700C78F70 /* Password */,
 				006D3330232DFB2800C78F70 /* Settings */,
@@ -175,10 +280,18 @@
 		006D3324232DFA7100C78F70 /* FingerPrint */ = {
 			isa = PBXGroup;
 			children = (
-				006D333E232E278300C78F70 /* Add */,
-				006D3325232DFA9200C78F70 /* WLFingerPrintVC.h */,
-				006D3326232DFA9200C78F70 /* WLFingerPrintVC.m */,
-				006D3327232DFA9200C78F70 /* WLFingerPrintVC.xib */,
+				006D3325232DFA9200C78F70 /* WLFingerPrintListVC.h */,
+				006D3326232DFA9200C78F70 /* WLFingerPrintListVC.m */,
+				006D3327232DFA9200C78F70 /* WLFingerPrintListVC.xib */,
+				0031BE4123321833008B9790 /* WLFingerPrintDetailVC.h */,
+				0031BE4223321833008B9790 /* WLFingerPrintDetailVC.m */,
+				0031BE4323321833008B9790 /* WLFingerPrintDetailVC.xib */,
+				006D333F232E27A300C78F70 /* WLAddFingerPrintVC.h */,
+				006D3340232E27A300C78F70 /* WLAddFingerPrintVC.m */,
+				006D3341232E27A300C78F70 /* WLAddFingerPrintVC.xib */,
+				006D3344232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.h */,
+				006D3345232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.m */,
+				006D3346232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.xib */,
 			);
 			path = FingerPrint;
 			sourceTree = "<group>";
@@ -199,6 +312,7 @@
 				006D3331232DFB3B00C78F70 /* WLSettingsVC.h */,
 				006D3332232DFB3B00C78F70 /* WLSettingsVC.m */,
 				006D3333232DFB3B00C78F70 /* WLSettingsVC.xib */,
+				0031BE252332019E008B9790 /* Controllers */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -206,23 +320,14 @@
 		006D333A232E1F3400C78F70 /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
+				0031BE242331FC94008B9790 /* WLCommonViewHeader.h */,
 				006D333B232E1F5100C78F70 /* WLSubmitButton.h */,
 				006D333C232E1F5100C78F70 /* WLSubmitButton.m */,
+				0031BE1F2331E226008B9790 /* WLCommonTbCell.h */,
+				0031BE202331E226008B9790 /* WLCommonTbCell.m */,
+				0031BE212331E226008B9790 /* WLCommonTbCell.xib */,
 			);
 			path = CommonView;
-			sourceTree = "<group>";
-		};
-		006D333E232E278300C78F70 /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				006D333F232E27A300C78F70 /* WLAddFingerPrintVC.h */,
-				006D3340232E27A300C78F70 /* WLAddFingerPrintVC.m */,
-				006D3341232E27A300C78F70 /* WLAddFingerPrintVC.xib */,
-				006D3344232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.h */,
-				006D3345232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.m */,
-				006D3346232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.xib */,
-			);
-			path = Add;
 			sourceTree = "<group>";
 		};
 		0071F08D232D502100D7C612 = {
@@ -250,8 +355,10 @@
 				0071F09A232D502200D7C612 /* AppDelegate.m */,
 				0071F09C232D502200D7C612 /* ViewController.h */,
 				0071F09D232D502200D7C612 /* ViewController.m */,
+				0031BE30233206BE008B9790 /* Manager */,
+				0031BE4923321D7F008B9790 /* Model */,
+				006D333A232E1F3400C78F70 /* CommonView */,
 				006D3301232D54C000C78F70 /* ViewControllers */,
-				006D3300232D54B700C78F70 /* Mnager */,
 				006D32FF232D54B000C78F70 /* Tools */,
 				007B757E232D52AC00F1C0AD /* Support Files */,
 			);
@@ -267,6 +374,7 @@
 				0071F0A7232D502300D7C612 /* Info.plist */,
 				0071F0A8232D502300D7C612 /* main.m */,
 				006D331A232DE5E600C78F70 /* PrefixHeader.pch */,
+				0031BE1E2331E1A3008B9790 /* WLDefines.h */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -348,14 +456,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0031BE3B23320D86008B9790 /* WLVersionInfoVC.xib in Resources */,
 				0071F0A6232D502300D7C612 /* LaunchScreen.storyboard in Resources */,
+				0031BE4023320EDE008B9790 /* WLIndexVC.xib in Resources */,
+				0031BE2A233201C7008B9790 /* WLSettingsVC_Volumn.xib in Resources */,
 				006D332F232DFAAE00C78F70 /* WLPasswordVC.xib in Resources */,
 				006D3311232D562300C78F70 /* WLRootVC.xib in Resources */,
-				006D3329232DFA9200C78F70 /* WLFingerPrintVC.xib in Resources */,
+				0031BE232331E226008B9790 /* WLCommonTbCell.xib in Resources */,
+				006D3329232DFA9200C78F70 /* WLFingerPrintListVC.xib in Resources */,
+				0031BE2F233201EC008B9790 /* WLSettingsVC_Shake.xib in Resources */,
 				006D3343232E27A300C78F70 /* WLAddFingerPrintVC.xib in Resources */,
 				0071F0A3232D502300D7C612 /* Assets.xcassets in Resources */,
 				0071F0A1232D502200D7C612 /* Main.storyboard in Resources */,
 				006D3335232DFB3B00C78F70 /* WLSettingsVC.xib in Resources */,
+				0031BE4523321833008B9790 /* WLFingerPrintDetailVC.xib in Resources */,
 				006D331C232DE73100C78F70 /* WLIndexItemView.xib in Resources */,
 				006D3348232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.xib in Resources */,
 			);
@@ -393,19 +507,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0031BE33233206D6008B9790 /* WLSettingsManager.m in Sources */,
 				006D332E232DFAAE00C78F70 /* WLPasswordVC.m in Sources */,
-				006D3328232DFA9200C78F70 /* WLFingerPrintVC.m in Sources */,
+				006D3328232DFA9200C78F70 /* WLFingerPrintListVC.m in Sources */,
 				006D3339232E1BE500C78F70 /* NSArray+MGListViewDatasourse.m in Sources */,
 				006D333D232E1F5100C78F70 /* WLSubmitButton.m in Sources */,
 				006D3305232D552800C78F70 /* WLBaseVC.m in Sources */,
+				0031BE3A23320D86008B9790 /* WLVersionInfoVC.m in Sources */,
 				006D3334232DFB3B00C78F70 /* WLSettingsVC.m in Sources */,
 				006D3317232DE4DD00C78F70 /* WLIndexItemView.m in Sources */,
 				0071F09E232D502200D7C612 /* ViewController.m in Sources */,
 				006D3342232E27A300C78F70 /* WLAddFingerPrintVC.m in Sources */,
+				0031BE4423321833008B9790 /* WLFingerPrintDetailVC.m in Sources */,
 				006D3308232D554F00C78F70 /* WLBaseNavController.m in Sources */,
+				0031BE4D23321DB0008B9790 /* WLFingerPrint.m in Sources */,
 				006D3347232E30AF00C78F70 /* WLAddFingerPrintVC_Step2.m in Sources */,
+				0031BE2E233201EC008B9790 /* WLSettingsVC_Shake.m in Sources */,
 				006D330B232D556A00C78F70 /* WLBaseTabBarController.m in Sources */,
+				0031BE3F23320EDE008B9790 /* WLIndexVC.m in Sources */,
+				0031BE4823321BF9008B9790 /* UITableView+Tap.m in Sources */,
+				0031BE29233201C7008B9790 /* WLSettingsVC_Volumn.m in Sources */,
 				0071F0A9232D502300D7C612 /* main.m in Sources */,
+				0031BE222331E226008B9790 /* WLCommonTbCell.m in Sources */,
+				0031BE5223321F20008B9790 /* WLDataManager.m in Sources */,
 				006D3310232D562300C78F70 /* WLRootVC.m in Sources */,
 				0071F09B232D502200D7C612 /* AppDelegate.m in Sources */,
 			);

@@ -10,9 +10,10 @@
 
 #import "WLIndexItemView.h"
 
-#import "WLFingerPrintVC.h"     //开门指纹
+#import "WLFingerPrintListVC.h"     //开门指纹
 #import "WLPasswordVC.h"        //开门密码
 #import "WLSettingsVC.h"        //设置
+#import "WLVersionInfoVC.h"     //版本信息
 
 @interface WLRootVC ()
 
@@ -33,7 +34,7 @@
     
     WeakSelf(weakSelf)
     [_item_fingerPrint setICON:@"index_fingerPrint" title:@"开门指纹" tag:0 action:^(NSInteger index) {
-        WLFingerPrintVC *vc = [[WLFingerPrintVC alloc] init];
+        WLFingerPrintListVC *vc = [[WLFingerPrintListVC alloc] init];
         [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
     [_item_password setICON:@"index_password" title:@"开门密码" tag:1 action:^(NSInteger index) {
@@ -53,7 +54,8 @@
 #pragma mark -
 
 - (void)action_info:(id)sender {
-    NSLog(@"info");
+    WLVersionInfoVC *vc = [[WLVersionInfoVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

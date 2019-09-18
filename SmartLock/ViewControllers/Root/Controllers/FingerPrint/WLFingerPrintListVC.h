@@ -1,5 +1,5 @@
 //
-//  WLAddFingerPrintVC.h
+//  WLFingerPrintListVC.h
 //  SmartLock
 //
 //  Created by MG_PDY on 2019/9/15.
@@ -8,6 +8,6 @@
 
 #import "WLBaseVC.h"
 
-@interface WLAddFingerPrintVC : WLBaseVC
+@interface WLFingerPrintListVC : WLBaseVC
 
 @end
