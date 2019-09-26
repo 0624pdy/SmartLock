@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0029516B233D10B800AC76C6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0029516A233D10B800AC76C6 /* CoreBluetooth.framework */; };
+		0029516F233D193B00AC76C6 /* WLBaseWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0029516E233D193B00AC76C6 /* WLBaseWebVC.m */; };
+		00295172233D1A9100AC76C6 /* LMWebviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00295171233D1A9100AC76C6 /* LMWebviewController.m */; };
+		00295177233D1C2D00AC76C6 /* WLAgreementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 00295175233D1C2D00AC76C6 /* WLAgreementVC.m */; };
+		00295178233D1C2D00AC76C6 /* WLAgreementVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00295176233D1C2D00AC76C6 /* WLAgreementVC.xib */; };
+		0029517C233D381100AC76C6 /* WLBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0029517B233D381100AC76C6 /* WLBluetoothManager.m */; };
 		0031BE222331E226008B9790 /* WLCommonTbCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE202331E226008B9790 /* WLCommonTbCell.m */; };
 		0031BE232331E226008B9790 /* WLCommonTbCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0031BE212331E226008B9790 /* WLCommonTbCell.xib */; };
 		0031BE29233201C7008B9790 /* WLSettingsVC_Volumn.m in Sources */ = {isa = PBXBuildFile; fileRef = 0031BE27233201C7008B9790 /* WLSettingsVC_Volumn.m */; };
@@ -53,6 +59,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0029516A233D10B800AC76C6 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		0029516D233D193B00AC76C6 /* WLBaseWebVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLBaseWebVC.h; sourceTree = "<group>"; };
+		0029516E233D193B00AC76C6 /* WLBaseWebVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLBaseWebVC.m; sourceTree = "<group>"; };
+		00295170233D1A9100AC76C6 /* LMWebviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMWebviewController.h; sourceTree = "<group>"; };
+		00295171233D1A9100AC76C6 /* LMWebviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMWebviewController.m; sourceTree = "<group>"; };
+		00295174233D1C2D00AC76C6 /* WLAgreementVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLAgreementVC.h; sourceTree = "<group>"; };
+		00295175233D1C2D00AC76C6 /* WLAgreementVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLAgreementVC.m; sourceTree = "<group>"; };
+		00295176233D1C2D00AC76C6 /* WLAgreementVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WLAgreementVC.xib; sourceTree = "<group>"; };
+		0029517A233D381100AC76C6 /* WLBluetoothManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLBluetoothManager.h; sourceTree = "<group>"; };
+		0029517B233D381100AC76C6 /* WLBluetoothManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLBluetoothManager.m; sourceTree = "<group>"; };
 		0031BE1E2331E1A3008B9790 /* WLDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLDefines.h; sourceTree = "<group>"; };
 		0031BE1F2331E226008B9790 /* WLCommonTbCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLCommonTbCell.h; sourceTree = "<group>"; };
 		0031BE202331E226008B9790 /* WLCommonTbCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLCommonTbCell.m; sourceTree = "<group>"; };
@@ -139,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				006D3322232DF05A00C78F70 /* MyCategory.framework in Frameworks */,
+				0029516B233D10B800AC76C6 /* CoreBluetooth.framework in Frameworks */,
 				9E2A1360D7F98301BE757F86 /* libPods-SmartLock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +163,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00295173233D1BEB00AC76C6 /* Agreement */ = {
+			isa = PBXGroup;
+			children = (
+				00295174233D1C2D00AC76C6 /* WLAgreementVC.h */,
+				00295175233D1C2D00AC76C6 /* WLAgreementVC.m */,
+				00295176233D1C2D00AC76C6 /* WLAgreementVC.xib */,
+			);
+			path = Agreement;
+			sourceTree = "<group>";
+		};
+		00295179233D37E900AC76C6 /* WLBluetoothManager */ = {
+			isa = PBXGroup;
+			children = (
+				0029517A233D381100AC76C6 /* WLBluetoothManager.h */,
+				0029517B233D381100AC76C6 /* WLBluetoothManager.m */,
+			);
+			path = WLBluetoothManager;
+			sourceTree = "<group>";
+		};
 		0031BE252332019E008B9790 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +198,7 @@
 		0031BE30233206BE008B9790 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				00295179233D37E900AC76C6 /* WLBluetoothManager */,
 				0031BE3523320731008B9790 /* WLToolsHeader.h */,
 				0031BE4623321BF9008B9790 /* UITableView+Tap.h */,
 				0031BE4723321BF9008B9790 /* UITableView+Tap.m */,
@@ -237,6 +274,10 @@
 				006D3307232D554F00C78F70 /* WLBaseNavController.m */,
 				006D3309232D556A00C78F70 /* WLBaseTabBarController.h */,
 				006D330A232D556A00C78F70 /* WLBaseTabBarController.m */,
+				00295170233D1A9100AC76C6 /* LMWebviewController.h */,
+				00295171233D1A9100AC76C6 /* LMWebviewController.m */,
+				0029516D233D193B00AC76C6 /* WLBaseWebVC.h */,
+				0029516E233D193B00AC76C6 /* WLBaseWebVC.m */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -269,6 +310,7 @@
 		006D3323232DFA5B00C78F70 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				00295173233D1BEB00AC76C6 /* Agreement */,
 				0031BE3623320D65008B9790 /* VersionInfo */,
 				006D3324232DFA7100C78F70 /* FingerPrint */,
 				006D332A232DFA9700C78F70 /* Password */,
@@ -391,6 +433,7 @@
 		CD658F4F8D75AED5338FE2FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0029516A233D10B800AC76C6 /* CoreBluetooth.framework */,
 				006D3321232DF05A00C78F70 /* MyCategory.framework */,
 				006D331F232DF04100C78F70 /* MyCategory.framework */,
 				3513D8456711290C9ECBCCB3 /* libPods-SmartLock.a */,
@@ -468,6 +511,7 @@
 				006D3343232E27A300C78F70 /* WLAddFingerPrintVC.xib in Resources */,
 				0071F0A3232D502300D7C612 /* Assets.xcassets in Resources */,
 				0071F0A1232D502200D7C612 /* Main.storyboard in Resources */,
+				00295178233D1C2D00AC76C6 /* WLAgreementVC.xib in Resources */,
 				006D3335232DFB3B00C78F70 /* WLSettingsVC.xib in Resources */,
 				0031BE4523321833008B9790 /* WLFingerPrintDetailVC.xib in Resources */,
 				006D331C232DE73100C78F70 /* WLIndexItemView.xib in Resources */,
@@ -520,9 +564,13 @@
 				006D3342232E27A300C78F70 /* WLAddFingerPrintVC.m in Sources */,
 				0031BE4423321833008B9790 /* WLFingerPrintDetailVC.m in Sources */,
 				006D3308232D554F00C78F70 /* WLBaseNavController.m in Sources */,
+				0029517C233D381100AC76C6 /* WLBluetoothManager.m in Sources */,
+				0029516F233D193B00AC76C6 /* WLBaseWebVC.m in Sources */,
+				00295177233D1C2D00AC76C6 /* WLAgreementVC.m in Sources */,
 				0031BE4D23321DB0008B9790 /* WLFingerPrint.m in Sources */,
 				006D3347232E30AF00C78F70 /* WLFingerPrintValidateVC.m in Sources */,
 				0031BE2E233201EC008B9790 /* WLSettingsVC_Shake.m in Sources */,
+				00295172233D1A9100AC76C6 /* LMWebviewController.m in Sources */,
 				006D330B232D556A00C78F70 /* WLBaseTabBarController.m in Sources */,
 				0031BE3F23320EDE008B9790 /* WLIndexVC.m in Sources */,
 				0031BE4823321BF9008B9790 /* UITableView+Tap.m in Sources */,
@@ -685,6 +733,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartLock/PrefixHeader.pch;
 				INFOPLIST_FILE = SmartLock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -708,7 +757,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdy.SmartLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -728,6 +777,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SmartLock/PrefixHeader.pch;
 				INFOPLIST_FILE = SmartLock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -751,7 +801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pdy.SmartLock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

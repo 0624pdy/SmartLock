@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLVersionInfoVC">
             <connections>
+                <outlet property="btn" destination="DK4-sv-Uu2" id="uzr-Fz-m9D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,9 +18,68 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GmS-6y-Lat">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view key="tableHeaderView" contentMode="scaleToFill" id="jwt-ZK-slA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="283"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Aus-Ki-dOR">
+                                <rect key="frame" x="116" y="54" width="143" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="myx-1w-KHY"/>
+                                    <constraint firstAttribute="width" constant="143" id="uB0-BM-AZy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最新版本v1.1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGw-qG-QPL">
+                                <rect key="frame" x="135" y="222" width="105" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前版本v1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1N-jd-8lq">
+                                <rect key="frame" x="146.5" y="248" width="82" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pGw-qG-QPL" firstAttribute="centerX" secondItem="Aus-Ki-dOR" secondAttribute="centerX" id="O0j-vN-5jk"/>
+                            <constraint firstItem="pGw-qG-QPL" firstAttribute="top" secondItem="Aus-Ki-dOR" secondAttribute="bottom" constant="25" id="TeW-vm-2Dg"/>
+                            <constraint firstItem="C1N-jd-8lq" firstAttribute="centerX" secondItem="Aus-Ki-dOR" secondAttribute="centerX" id="YgN-lN-7Ti"/>
+                            <constraint firstItem="C1N-jd-8lq" firstAttribute="top" secondItem="pGw-qG-QPL" secondAttribute="bottom" constant="6" id="edh-kA-tQc"/>
+                            <constraint firstItem="Aus-Ki-dOR" firstAttribute="centerX" secondItem="jwt-ZK-slA" secondAttribute="centerX" id="t2E-lf-NkN"/>
+                            <constraint firstItem="Aus-Ki-dOR" firstAttribute="top" secondItem="jwt-ZK-slA" secondAttribute="top" constant="54" id="te3-hv-5hi"/>
+                        </constraints>
+                    </view>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DK4-sv-Uu2" customClass="WLSubmitButton">
+                    <rect key="frame" x="24" y="603" width="327" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="hyf-cG-gXu"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="GmS-6y-Lat" secondAttribute="trailing" id="0SX-LE-RNK"/>
+                <constraint firstItem="DK4-sv-Uu2" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="8D9-p7-TFf"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="GmS-6y-Lat" secondAttribute="bottom" id="Gkc-qG-I2B"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="DK4-sv-Uu2" secondAttribute="trailing" constant="24" id="RCT-ha-TjM"/>
+                <constraint firstItem="GmS-6y-Lat" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="cV6-ee-c1L"/>
+                <constraint firstItem="GmS-6y-Lat" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="gUb-Gb-fSA"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="DK4-sv-Uu2" secondAttribute="bottom" constant="14" id="wE3-sg-YCx"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="113" y="193"/>
+            <point key="canvasLocation" x="112.8" y="192.95352323838082"/>
         </view>
     </objects>
+    <resources>
+        <image name="index_icon" width="143" height="143"/>
+    </resources>
 </document>

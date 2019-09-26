@@ -8,6 +8,9 @@
 
 #import "WLIndexVC.h"
 
+#import "WLBaseNavController.h"
+#import "WLAgreementVC.h"
+
 @interface WLIndexVC ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *img_icon;
@@ -32,6 +35,12 @@
 
 
 
+- (IBAction)action_agreement:(id)sender {
+    WLAgreementVC *vc = [[WLAgreementVC alloc] init];
+    vc.urlString = @"https://www.baidu.com/";
+    WLBaseNavController *nav = [[WLBaseNavController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+}
 
 
 @end

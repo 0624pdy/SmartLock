@@ -29,7 +29,11 @@
     
     [self showStartVC_ifNeeded];
     
-    self.window.backgroundColor = UIColor.redColor;
+    if (@available(iOS 13, *)) {
+        self.window.backgroundColor = UIColor.blackColor;
+    } else {
+        self.window.backgroundColor = UIColor.whiteColor;
+    }
     [self.window makeKeyAndVisible];
     
     return YES;

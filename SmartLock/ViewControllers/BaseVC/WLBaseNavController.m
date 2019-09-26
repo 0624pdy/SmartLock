@@ -19,14 +19,17 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.viewControllers.count > 0) {
+        UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_info"] style:UIBarButtonItemStylePlain target:self action:@selector(action_back:)];
+        viewController.navigationItem.leftBarButtonItem = back;
+        
+        self.interactivePopGestureRecognizer.delegate = nil;
+    }
+    [super pushViewController:viewController animated:animated];
 }
-*/
+- (void)action_back:(id)sender {
+    [self popViewControllerAnimated:YES];
+}
 
 @end

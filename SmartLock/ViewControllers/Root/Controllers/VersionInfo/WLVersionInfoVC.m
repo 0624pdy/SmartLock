@@ -10,6 +10,8 @@
 
 @interface WLVersionInfoVC ()
 
+@property (weak, nonatomic) IBOutlet WLSubmitButton *btn;
+
 @end
 
 @implementation WLVersionInfoVC
@@ -19,6 +21,11 @@
     // Do any additional setup after loading the view from its nib.
     
     self.navigationItem.title = @"版本信息";
+    
+    _btn.btnTitle = @"立即升级";
+    _btn.block_click = ^(id sender) {
+        NSLog(@"立即升级");
+    };
 }
 
 @end
