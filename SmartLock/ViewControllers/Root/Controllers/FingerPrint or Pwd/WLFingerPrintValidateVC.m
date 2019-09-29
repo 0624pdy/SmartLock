@@ -76,11 +76,35 @@
     _lbl.textAlignment = NSTextAlignmentCenter;
     
     
+    WeakSelf(weakSelf)
     _btn.btnTitle = _btnTitle;
     _btn.block_click = ^(id sender) {
         ///TODO: 添加指纹
-        
+        [weakSelf didAddFinger];
     };
+}
+
+
+
+
+#pragma mark -
+
+- (void)didAddFinger {
+    if (_optType == WLFingerPrintOptType_Add) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:WLNotification_DidAddFinger object:_model];
+        
+        NSArray *vcs = self.navigationController.viewControllers.mutableCopy;
+        NSMutableArray *targetVCs = @[].mutableCopy;
+        for (UIViewController *vc in vcs) {
+            if ([vc isKindOfClass:NSClassFromString(@"WLIndexFormVC")]) {
+                break;
+            }
+            [targetVCs addObject:vc];
+        }
+        [self.navigationController setViewControllers:targetVCs animated:YES];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 

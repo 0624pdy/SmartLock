@@ -47,6 +47,7 @@ FOUNDATION_EXPORT const unsigned char MyCategoryVersionString[];
 #import <MyCategory/UINavigationController+MGExt.h> // 文本属性（字体、大小）
 #import <MyCategory/UIViewController+MGExt.h>
 
+#import <MyCategory/UITextField+WLExt.h>            
 #import <MyCategory/UITextView+Placeholder.h>
 
 #import <MyCategory/NSDate+PDYExt.h>                // 日期

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLIndexDetailVC">
             <connections>
+                <outlet property="btn" destination="0He-8Z-Zqr" id="nfP-Rb-Iiu"/>
                 <outlet property="listView" destination="Ovu-Gp-E7U" id="CPV-Jw-g65"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,12 +24,22 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0He-8Z-Zqr" customClass="WLSubmitButton">
+                    <rect key="frame" x="24" y="582" width="327" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="tmV-Nf-6je"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Ovu-Gp-E7U" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="7AF-Y3-RNz"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="0He-8Z-Zqr" secondAttribute="trailing" constant="24" id="AQh-BT-juZ"/>
                 <constraint firstItem="Ovu-Gp-E7U" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="HD5-Qz-6m3"/>
                 <constraint firstItem="Ovu-Gp-E7U" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Qha-UM-hc7"/>
+                <constraint firstItem="0He-8Z-Zqr" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="T6F-tt-rD3"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="0He-8Z-Zqr" secondAttribute="bottom" constant="35" id="gRd-Lj-TSn"/>
                 <constraint firstItem="Ovu-Gp-E7U" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="pB7-4T-Y8V"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

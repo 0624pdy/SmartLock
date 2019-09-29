@@ -13,6 +13,8 @@
 #import "WLDataManager.h"       //数据
 #import "WLBluetoothManager.h"  //蓝牙
 
+#import "WLAlertView+PDYExt.h"
+
 #import "UITableView+Tap.h"
 
 #endif /* WLToolsHeader_h */

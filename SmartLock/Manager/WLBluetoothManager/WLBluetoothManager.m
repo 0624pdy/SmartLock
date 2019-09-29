@@ -163,6 +163,8 @@
     if (_block_didDiscoverPeripheral) {
         _block_didDiscoverPeripheral(self, peripheral);
     }
+    
+    [central stopScan];
 }
 
 /*!

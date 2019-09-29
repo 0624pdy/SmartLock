@@ -21,7 +21,7 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.viewControllers.count > 0) {
-        UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_info"] style:UIBarButtonItemStylePlain target:self action:@selector(action_back:)];
+        UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_back_white"] style:UIBarButtonItemStylePlain target:self action:@selector(action_back:)];
         viewController.navigationItem.leftBarButtonItem = back;
         
         self.interactivePopGestureRecognizer.delegate = nil;

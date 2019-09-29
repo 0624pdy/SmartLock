@@ -10,6 +10,6 @@
 
 @interface WLIndexDetailVC : WLBaseVC
 
-@property (nonatomic,strong) WLBaseModel *model;
+@property (nonatomic,strong) id model;
 
 @end

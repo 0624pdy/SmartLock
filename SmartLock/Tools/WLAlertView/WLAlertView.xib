@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WLAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZF-9G-Mko">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <items/>
+                </toolbar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jQ-qG-xMB">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1M-Zc-hKX">
+                            <rect key="frame" x="68" y="63" width="64" height="64"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="df3-ir-Spw">
+                            <rect key="frame" x="82" y="18" width="37" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLh-px-lkw">
+                            <rect key="frame" x="80" y="162" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqU-gz-AsL">
+                            <rect key="frame" x="80" y="135" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6jQ-qG-xMB" firstAttribute="leading" secondItem="kZF-9G-Mko" secondAttribute="leading" id="0rh-FS-28b"/>
+                <constraint firstItem="6jQ-qG-xMB" firstAttribute="top" secondItem="kZF-9G-Mko" secondAttribute="top" id="2uh-mK-QwR"/>
+                <constraint firstAttribute="trailing" secondItem="6jQ-qG-xMB" secondAttribute="trailing" id="56R-gC-ptg"/>
+                <constraint firstItem="6jQ-qG-xMB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EBH-Ls-cLP"/>
+                <constraint firstItem="6jQ-qG-xMB" firstAttribute="bottom" secondItem="kZF-9G-Mko" secondAttribute="bottom" id="QF9-0t-ctB"/>
+                <constraint firstItem="6jQ-qG-xMB" firstAttribute="trailing" secondItem="kZF-9G-Mko" secondAttribute="trailing" id="R6b-Oe-8y8"/>
+                <constraint firstItem="6jQ-qG-xMB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RND-lt-KLf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6jQ-qG-xMB" secondAttribute="bottom" id="a3p-KQ-zEm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="actView" destination="df3-ir-Spw" id="YPF-Ze-guD"/>
+                <outlet property="bg_blur" destination="kZF-9G-Mko" id="5Y0-S8-vph"/>
+                <outlet property="holder" destination="6jQ-qG-xMB" id="fhb-NG-Wjl"/>
+                <outlet property="img_icon" destination="z1M-Zc-hKX" id="qyT-Fm-cg4"/>
+                <outlet property="lbl_desc" destination="wLh-px-lkw" id="T34-he-jVU"/>
+                <outlet property="lbl_title" destination="IqU-gz-AsL" id="G4x-iy-9lF"/>
+            </connections>
+            <point key="canvasLocation" x="-40" y="94"/>
+        </view>
+    </objects>
+</document>

@@ -58,6 +58,9 @@ static NSString *WLDefault_Shake = @"不震动";
 
 #pragma mark - 通知
 
-static NSString *WLNotification_StartUsingApp = @"WLNotification_StartUsingApp";
+static NSString *WLNotification_StartUsingApp   = @"WLNotification_StartUsingApp";
+static NSString *WLNotification_DidAddFinger    = @"WLNotification_DidAddFinger";
+static NSString *WLNotification_DidAddPassword  = @"WLNotification_DidAddPassword";
+static NSString *WLNotification_DidDelPassword  = @"WLNotification_DidDelPassword";
 
 #endif /* WLDefines_h */

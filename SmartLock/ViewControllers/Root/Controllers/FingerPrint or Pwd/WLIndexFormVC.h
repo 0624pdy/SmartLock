@@ -10,7 +10,18 @@
 
 @interface WLIndexFormVC : WLBaseVC
 
-@property (nonatomic,strong) WLBaseModel *model;
+@property (nonatomic,strong) id model;
 @property (nonatomic,assign) BOOL isEdit;
+
+@end
+
+
+
+
+@interface WLTextFieldObj : NSObject
+
+@property (nonatomic,copy) NSString *placeholder;
+@property (nonatomic,copy) NSString *text;
+@property (nonatomic,assign) BOOL hide;
 
 @end

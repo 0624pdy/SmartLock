@@ -11,6 +11,9 @@
 #import "WLIndexFormVC.h"          //修改名称
 #import "WLFingerPrintValidateVC.h"     //重录指纹
 
+
+
+
 @interface WLIndexDetailVC ()
 {
     NSString *__navTitle__;
@@ -20,6 +23,11 @@
     WLVcType  __typeFor_row_1__;
 }
 @property (weak, nonatomic) IBOutlet UITableView *listView;
+@property (weak, nonatomic) IBOutlet WLSubmitButton *btn;
+
+
+@property (nonatomic,strong) WLFingerPrint *finger;
+@property (nonatomic,strong) WLPassword *password;
 
 @end
 
@@ -28,19 +36,21 @@
 - (void)wl_genDefaultValues {
     switch (self.vcType) {
         case WLVcType_Detail_Finger: {
-            __navTitle__ = _model.theName;
-            __row_0_title__ = @"修改名称";
-            __row_1_title__ = @"重录指纹";
-            __typeFor_row_0__ = WLVcType_Form_FingerName;
-            __typeFor_row_1__ = WLVcType_Validate_Finger;
+            _finger             = (WLFingerPrint *)_model;
+            __navTitle__        = _finger.name;
+            __row_0_title__     = @"修改名称";
+            __row_1_title__     = @"重录指纹";
+            __typeFor_row_0__   = WLVcType_Form_FingerName;
+            __typeFor_row_1__   = WLVcType_Validate_Finger;
         }
             break;
         case WLVcType_Detail_Password: {
-            __navTitle__ = _model.theName;
-            __row_0_title__ = @"修改名称";
-            __row_1_title__ = @"修改密码";
-            __typeFor_row_0__ = WLVcType_Form_PasswordName;
-            __typeFor_row_1__ = WLVcType_Form_Password;
+            _password           = (WLPassword *)_model;
+            __navTitle__        = _password.name;
+            __row_0_title__     = @"修改名称";
+            __row_1_title__     = @"修改密码";
+            __typeFor_row_0__   = WLVcType_Form_PasswordName;
+            __typeFor_row_1__   = WLVcType_Form_Password;
         }
             break;
         default:
@@ -51,6 +61,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    WeakSelf(weakSelf)
     self.navigationItem.title = __navTitle__;
     
     
@@ -67,11 +78,43 @@
     sec_0.dy_rowHeight = 50;
     sec_0.dy_cellIden = UITableViewCell.dy_name;
     [self.rootDatas addObject:sec_0];
+    
+    
+    //底部按钮
+    switch (self.vcType) {
+        case WLVcType_Detail_Password: {
+            _btn.btnTitle = @"移除密码";
+            [_btn mg_configBg:^DYBgStyle(UIView *theView) {
+                theView.mg_enabledColor = RGBA(224, 32, 32, 1);
+                return DYBgStyle_EnabledNormal;
+            }];
+            _btn.block_click = ^(id sender) {
+                [weakSelf action_btn];
+            };
+            _btn.hidden = NO;
+        }
+            break;
+        default: {
+            _btn.hidden = YES;
+        }
+            break;
+    }
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.navigationItem.title = _model.theName;
+    self.navigationItem.title = (_finger ? _finger.name : (_password ? _password.name : nil));
+}
+
+
+
+
+#pragma mark - Action
+
+- (void)action_btn {
+    //移除密码
+    [[NSNotificationCenter defaultCenter] postNotificationName:WLNotification_DidDelPassword object:_model];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -102,7 +145,7 @@
             //重录指纹
             WLFingerPrintValidateVC *vc = [[WLFingerPrintValidateVC alloc] init];
             vc.model = _model;
-            vc.optType = (arc4random() % 3);//WLFingerPrintOptType_Reset;
+            vc.optType = WLFingerPrintOptType_Reset;
             [self.navigationController pushViewController:vc animated:YES];
         } else {
             //修改密码

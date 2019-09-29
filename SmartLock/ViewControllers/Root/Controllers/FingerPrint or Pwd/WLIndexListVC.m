@@ -8,8 +8,8 @@
 
 #import "WLIndexListVC.h"
 
-#import "WLIndexFormVC.h"      //添加
-#import "WLIndexDetailVC.h"   //详情
+#import "WLIndexFormVC.h"       //添加
+#import "WLIndexDetailVC.h"     //详情
 
 @interface WLIndexListVC ()
 {
@@ -65,6 +65,13 @@
     _btn.block_click = ^(id sender) {
         [weakSelf action_new:nil];
     };
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notify_didAddObj:) name:WLNotification_DidAddFinger object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notify_didAddObj:) name:WLNotification_DidAddPassword object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notify_didDelObj:) name:WLNotification_DidDelPassword object:nil];
+    
+    [WLAlertView showLoading:-1];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -82,13 +89,37 @@
 
 
 
+#pragma mark - Notification
+
+- (void)notify_didAddObj:(NSNotification *)notify {
+    if (self.sec.count == 0) {
+        [self.sec wl_addObj:notify.object];
+    } else {
+        [self.sec insertObject:notify.object atIndex:0];
+    }
+    [_listView reloadData];
+}
+- (void)notify_didDelObj:(NSNotification *)notify {
+    if ([self.sec containsObject:notify.object]) {
+        [self.sec wl_removeObj:notify.object];
+        [_listView reloadData];
+    }
+}
+
+
+
+
 #pragma mark - Datas
 
 - (void)loadDatas {
-    NSArray *datas = __originDatas__;
-    [self.sec wl_addObjs:datas];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSArray *datas = self->__originDatas__;
+        [self.sec wl_addObjs:datas];
+        [self.listView reloadData];
+        
+        [WLAlertView dismiss];
+    });
     
-    [_listView reloadData];
 }
 
 

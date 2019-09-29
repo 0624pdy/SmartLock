@@ -108,7 +108,7 @@
                 <constraint firstItem="Oiy-q8-QVn" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="s1d-2z-q6e"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-439" y="72"/>
+            <point key="canvasLocation" x="7" y="269"/>
         </view>
     </objects>
 </document>

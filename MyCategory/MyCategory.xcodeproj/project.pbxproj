@@ -17,6 +17,8 @@
 		000E758C228AA7E100F0E9FB /* NSData+PDYExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E758A228AA7E100F0E9FB /* NSData+PDYExt.m */; };
 		0044A8D12251DBBC00FFF43D /* NSDictionary+WLSafe.h in Headers */ = {isa = PBXBuildFile; fileRef = 0044A8CF2251DBBC00FFF43D /* NSDictionary+WLSafe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0044A8D22251DBBC00FFF43D /* NSDictionary+WLSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044A8D02251DBBC00FFF43D /* NSDictionary+WLSafe.m */; };
+		0067BF8F234084DA00148E96 /* UITextField+WLExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0067BF8D234084DA00148E96 /* UITextField+WLExt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0067BF90234084DA00148E96 /* UITextField+WLExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 0067BF8E234084DA00148E96 /* UITextField+WLExt.m */; };
 		007B23FC2241D1F300020B8C /* UIView+AddToView.h in Headers */ = {isa = PBXBuildFile; fileRef = 007B23FA2241D1F300020B8C /* UIView+AddToView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		007B23FD2241D1F300020B8C /* UIView+AddToView.m in Sources */ = {isa = PBXBuildFile; fileRef = 007B23FB2241D1F300020B8C /* UIView+AddToView.m */; };
 		008125C92238F7E000F5FD6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008125C82238F7E000F5FD6A /* Foundation.framework */; };
@@ -70,7 +72,7 @@
 		00BF5C1B22412387008BEF22 /* UINavigationController+MGExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BF5C1922412387008BEF22 /* UINavigationController+MGExt.m */; };
 		00BF5C1E224123DC008BEF22 /* UIViewController+MGExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 00BF5C1C224123DC008BEF22 /* UIViewController+MGExt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00BF5C1F224123DC008BEF22 /* UIViewController+MGExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BF5C1D224123DC008BEF22 /* UIViewController+MGExt.m */; };
-		00D22E202325E63000725979 /* NSString+WLFilePath.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D22E1E2325E63000725979 /* NSString+WLFilePath.h */; };
+		00D22E202325E63000725979 /* NSString+WLFilePath.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D22E1E2325E63000725979 /* NSString+WLFilePath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00D22E212325E63000725979 /* NSString+WLFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D22E1F2325E63000725979 /* NSString+WLFilePath.m */; };
 		00D9BD3A224B749E006FACFB /* UIAlertController+WLExt.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D9BD38224B749E006FACFB /* UIAlertController+WLExt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00D9BD3B224B749E006FACFB /* UIAlertController+WLExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D9BD39224B749E006FACFB /* UIAlertController+WLExt.m */; };
@@ -92,6 +94,8 @@
 		000E758A228AA7E100F0E9FB /* NSData+PDYExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+PDYExt.m"; sourceTree = "<group>"; };
 		0044A8CF2251DBBC00FFF43D /* NSDictionary+WLSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WLSafe.h"; sourceTree = "<group>"; };
 		0044A8D02251DBBC00FFF43D /* NSDictionary+WLSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WLSafe.m"; sourceTree = "<group>"; };
+		0067BF8D234084DA00148E96 /* UITextField+WLExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+WLExt.h"; sourceTree = "<group>"; };
+		0067BF8E234084DA00148E96 /* UITextField+WLExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WLExt.m"; sourceTree = "<group>"; };
 		007B23FA2241D1F300020B8C /* UIView+AddToView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+AddToView.h"; sourceTree = "<group>"; };
 		007B23FB2241D1F300020B8C /* UIView+AddToView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+AddToView.m"; sourceTree = "<group>"; };
 		008125C82238F7E000F5FD6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -207,6 +211,15 @@
 				0044A8D02251DBBC00FFF43D /* NSDictionary+WLSafe.m */,
 			);
 			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		0067BF8C234084C100148E96 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				0067BF8D234084DA00148E96 /* UITextField+WLExt.h */,
+				0067BF8E234084DA00148E96 /* UITextField+WLExt.m */,
+			);
+			path = UITextField;
 			sourceTree = "<group>";
 		};
 		007B23FE2241D66C00020B8C /* AddToView */ = {
@@ -381,6 +394,7 @@
 				0096DF1E225B19AD00EA23CF /* UIImage */,
 				008125DB2238FAA000F5FD6A /* UIImageView */,
 				008125D22238FAA000F5FD6A /* UILabel */,
+				0067BF8C234084C100148E96 /* UITextField */,
 				009B3F482283BADE009054FC /* UITextView */,
 				008125D52238FAA000F5FD6A /* UIView */,
 				00BF5C1722412372008BEF22 /* UIViewController */,
@@ -484,6 +498,7 @@
 				009B3F4F2283BB5F009054FC /* UITextView+Placeholder.h in Headers */,
 				00FF1C4D22967B8D009E87D8 /* NSObject+EncodeDecode.h in Headers */,
 				008125EA2238FAA100F5FD6A /* UILabel+MGExt.h in Headers */,
+				0067BF8F234084DA00148E96 /* UITextField+WLExt.h in Headers */,
 				00D22E202325E63000725979 /* NSString+WLFilePath.h in Headers */,
 				00F408982282A558006E9324 /* MyDefines.h in Headers */,
 			);
@@ -575,6 +590,7 @@
 				00BF5C0F22407BD5008BEF22 /* NSString+TextAttr.m in Sources */,
 				000E757D228A954400F0E9FB /* NSAttributedString+PDYExt.m in Sources */,
 				008125FD2238FDAA00F5FD6A /* UIView+Gradient.m in Sources */,
+				0067BF90234084DA00148E96 /* UITextField+WLExt.m in Sources */,
 				008126122239025E00F5FD6A /* NSObject+JsonToModel.m in Sources */,
 				00BF5C1F224123DC008BEF22 /* UIViewController+MGExt.m in Sources */,
 				008125EF2238FAA100F5FD6A /* UIImageView+MGExt.m in Sources */,
