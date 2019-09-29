@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WLRootVC">
             <connections>
+                <outlet property="btn_settings" destination="4w8-m2-G13" id="cOI-P0-dZy"/>
+                <outlet property="holder_off" destination="CZr-8i-x8n" id="81m-rs-7gZ"/>
+                <outlet property="holder_on" destination="2Dc-lM-6bC" id="MXZ-70-wgr"/>
+                <outlet property="imgView" destination="XKO-vr-hjI" id="lyB-9B-YsX"/>
                 <outlet property="item_fingerPrint" destination="v83-mq-IfO" id="d0g-YN-WTd"/>
                 <outlet property="item_password" destination="HzV-RN-VUv" id="ET5-Zh-qmS"/>
                 <outlet property="item_settings" destination="8gt-ry-ZME" id="1bC-xi-rGy"/>
@@ -23,8 +25,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_wifi_icon_light" translatesAutoresizingMaskIntoConstraints="NO" id="XKO-vr-hjI">
-                    <rect key="frame" x="107.5" y="70" width="160" height="160"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index_bluetooth_off" translatesAutoresizingMaskIntoConstraints="NO" id="XKO-vr-hjI">
+                    <rect key="frame" x="107.5" y="50" width="160" height="160"/>
                     <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="160" id="M7C-e0-MFh"/>
@@ -32,10 +34,10 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Dc-lM-6bC">
-                    <rect key="frame" x="0.0" y="230" width="375" height="437"/>
+                    <rect key="frame" x="0.0" y="210" width="375" height="457"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQ8-RQ-7C7">
-                            <rect key="frame" x="0.0" y="87" width="375" height="320"/>
+                            <rect key="frame" x="0.0" y="107" width="375" height="320"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v83-mq-IfO" customClass="WLIndexItemView">
                                     <rect key="frame" x="30" y="10" width="315" height="80"/>
@@ -75,21 +77,60 @@
                         <constraint firstAttribute="trailing" secondItem="XQ8-RQ-7C7" secondAttribute="trailing" id="gI3-xH-jp6"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZr-8i-x8n">
+                    <rect key="frame" x="0.0" y="210" width="375" height="175"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="门锁未链接" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7j-bj-crh">
+                            <rect key="frame" x="0.0" y="50" width="375" height="22"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请打开蓝牙连接门锁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eed-nf-WCb">
+                            <rect key="frame" x="123" y="78" width="129" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4w8-m2-G13" customClass="WLSubmitButton">
+                            <rect key="frame" x="87.5" y="125" width="200" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="vqw-o4-Zwd"/>
+                                <constraint firstAttribute="height" constant="50" id="wMJ-Dz-bXi"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="O7j-bj-crh" firstAttribute="top" secondItem="CZr-8i-x8n" secondAttribute="top" constant="50" id="0pj-vq-D6U"/>
+                        <constraint firstItem="O7j-bj-crh" firstAttribute="leading" secondItem="CZr-8i-x8n" secondAttribute="leading" id="CcA-uh-sE2"/>
+                        <constraint firstAttribute="bottom" secondItem="4w8-m2-G13" secondAttribute="bottom" id="Tdh-3O-Rn8"/>
+                        <constraint firstAttribute="trailing" secondItem="O7j-bj-crh" secondAttribute="trailing" id="gjK-Fb-ukP"/>
+                        <constraint firstItem="Eed-nf-WCb" firstAttribute="centerX" secondItem="O7j-bj-crh" secondAttribute="centerX" id="iQl-av-WNw"/>
+                        <constraint firstItem="4w8-m2-G13" firstAttribute="top" secondItem="Eed-nf-WCb" secondAttribute="bottom" constant="30" id="kJw-dm-VA8"/>
+                        <constraint firstItem="4w8-m2-G13" firstAttribute="centerX" secondItem="O7j-bj-crh" secondAttribute="centerX" id="ta0-iN-7Xm"/>
+                        <constraint firstItem="Eed-nf-WCb" firstAttribute="top" secondItem="O7j-bj-crh" secondAttribute="bottom" constant="6" id="vfZ-q8-pnO"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="2Dc-lM-6bC" firstAttribute="leading" secondItem="CZr-8i-x8n" secondAttribute="leading" id="95p-FN-WUZ"/>
                 <constraint firstItem="XKO-vr-hjI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FSN-xp-JMx"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="2Dc-lM-6bC" secondAttribute="trailing" id="HsB-bq-OIG"/>
+                <constraint firstItem="2Dc-lM-6bC" firstAttribute="trailing" secondItem="CZr-8i-x8n" secondAttribute="trailing" id="KhQ-L9-HBz"/>
+                <constraint firstItem="2Dc-lM-6bC" firstAttribute="top" secondItem="CZr-8i-x8n" secondAttribute="top" id="Nu9-rT-iUq"/>
                 <constraint firstItem="2Dc-lM-6bC" firstAttribute="top" secondItem="XKO-vr-hjI" secondAttribute="bottom" id="c2I-yy-JM9"/>
                 <constraint firstItem="2Dc-lM-6bC" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="hvQ-kX-lNB"/>
                 <constraint firstItem="XKO-vr-hjI" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="pTx-O4-k3c"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="2Dc-lM-6bC" secondAttribute="bottom" id="x53-a9-3R3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-78" y="66"/>
+            <point key="canvasLocation" x="-686" y="352"/>
         </view>
     </objects>
     <resources>
-        <image name="index_wifi_icon_light" width="160" height="160"/>
+        <image name="index_bluetooth_off" width="160" height="160"/>
     </resources>
 </document>

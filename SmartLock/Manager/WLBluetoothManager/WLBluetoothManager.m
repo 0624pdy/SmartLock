@@ -54,6 +54,24 @@
 - (void)stopScan {
     [self.centralManager stopScan];
 }
+- (void)currentState:(WLBluetoothBlock_State)block {
+    _block_stateChanged = block;
+    
+    [self callbackState];
+}
+- (void)callbackState {
+    if (_block_stateChanged) {
+        if (@available(iOS 13.0, *)) {
+            CBManagerState state = self.centralManager.state;
+            _block_stateChanged(self, (state == CBManagerStatePoweredOn));
+        } else if (@available(iOS 10.0, *)) {
+            CBManagerState state = self.centralManager.state;
+            _block_stateChanged(self, (state == CBCentralManagerStatePoweredOn));
+        } else {
+            
+        }
+    }
+}
 
 
 
@@ -95,12 +113,13 @@
             NSLog(@">>>设备开启状态 -- 可用状态");
             
             //扫描外设
-            [self startScanning];
+            [self startScan];
         }
             break;
         default:
             break;
     }
+    [self callbackState];
 }
 
 /*!

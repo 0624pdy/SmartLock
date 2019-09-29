@@ -22,6 +22,22 @@ typedef NS_ENUM(NSInteger, WLFingerPrintOptType) {
     WLFingerPrintOptType_Reset  = 1,    //重录指纹
     WLFingerPrintOptType_Verify = 2,    //校验指纹
 };
+typedef NS_ENUM(NSInteger, WLVcType) {
+    
+    WLVcType_Unknown            = 0,    //未知
+    
+    WLVcType_List_FingerPrint   = 1,    //列表 - 开门指纹
+    WLVcType_List_Password      = 2,    //列表 - 开门密码
+    
+    WLVcType_Form_FingerName    = 3,    //表单 - 指纹名称 -
+    WLVcType_Form_PasswordName  = 4,    //表单 - 密码名称
+    WLVcType_Form_Password      = 5,    //表单 - 密码
+    
+    WLVcType_Detail_Finger      = 6,    //详情 - 指纹
+    WLVcType_Detail_Password    = 7,    //详情 - 密码
+    
+    WLVcType_Validate_Finger    = 7,    //验证 - 指纹
+};
 
 
 

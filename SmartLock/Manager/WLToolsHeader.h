@@ -9,7 +9,9 @@
 #ifndef WLToolsHeader_h
 #define WLToolsHeader_h
 
-#import "WLSettingsManager.h"
+#import "WLSettingsManager.h"   //设置
+#import "WLDataManager.h"       //数据
+#import "WLBluetoothManager.h"  //蓝牙
 
 #import "UITableView+Tap.h"
 

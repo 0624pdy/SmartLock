@@ -27,4 +27,9 @@
 @property (nonatomic,assign) BOOL mg_hideNav;
 @property (nonatomic,assign) BOOL wl_hideNavLine;
 
+
+
+@property (nonatomic,assign) WLVcType vcType;
+- (void)wl_genDefaultValues;
+
 @end

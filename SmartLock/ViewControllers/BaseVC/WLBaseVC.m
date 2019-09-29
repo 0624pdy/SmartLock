@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self wl_genDefaultValues];
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -62,6 +64,14 @@
         _rootDatas = [@[] mutableCopy];
     }
     return _rootDatas;
+}
+
+
+
+
+
+- (void)wl_genDefaultValues {
+    
 }
 
 

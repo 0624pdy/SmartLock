@@ -23,4 +23,23 @@
     
 }
 
+
+
+#pragma mark -
+
++ (NSArray<WLFingerPrint *> *)fingerPrintList {
+    return @[
+         [WLFingerPrint withName:@"左手 - 大拇指"],
+         [WLFingerPrint withName:@"右手 - 中指"],
+         [WLFingerPrint withName:@"左脚 - 拇指"],
+    ];
+}
++ (NSArray<WLPassword *> *)passwordList {
+    return @[
+         [WLPassword withName:@"密码1" password:@"111111"],
+         [WLPassword withName:@"密码2" password:@"222222"],
+         [WLPassword withName:@"密码3" password:@"333333"],
+    ];
+}
+
 @end

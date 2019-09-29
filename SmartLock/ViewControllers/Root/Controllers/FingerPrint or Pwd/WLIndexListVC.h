@@ -1,5 +1,5 @@
 //
-//  WLPasswordVC.h
+//  WLIndexListVC.h
 //  SmartLock
 //
 //  Created by MG_PDY on 2019/9/15.
@@ -8,6 +8,6 @@
 
 #import "WLBaseVC.h"
 
-@interface WLPasswordVC : WLBaseVC
+@interface WLIndexListVC : WLBaseVC
 
 @end

@@ -6,12 +6,13 @@
 //  Copyright © 2019 彭端阳. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "WLBaseModel.h"
 
-@interface WLFingerPrint : NSObject
+@interface WLFingerPrint : WLBaseModel < WLBaseModelProtocol >
 
 @property (nonatomic,copy) NSString *name;      //名称
 @property (nonatomic,copy) NSString *addTime;   //添加时间
+
 
 + (instancetype)withName:(NSString *)name;
 

@@ -27,7 +27,11 @@
                             UITableViewCellAccessoryDisclosureIndicator :
                             UITableViewCellAccessoryNone
                          );
-    _cons_lblR_R.constant = (wl_accessoryType == WLCellAccessoryType_Arrow ? 0 : 16);
+    if (@available(iOS 13, *)) {
+        _cons_lblR_R.constant = (wl_accessoryType == WLCellAccessoryType_Arrow ? 8 : 16);
+    } else {
+        _cons_lblR_R.constant = (wl_accessoryType == WLCellAccessoryType_Arrow ? 0 : 16);
+    }
     
     switch (wl_accessoryType) {
         case WLCellAccessoryType_None: {

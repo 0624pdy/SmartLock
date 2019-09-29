@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbl;
 @property (weak, nonatomic) IBOutlet WLSubmitButton *btn;
 
+
+@property (nonatomic,strong) WLFingerPrint *theModel;
+
 @end
 
 @implementation WLFingerPrintValidateVC
@@ -113,6 +116,8 @@
         }
             break;
     }
+    
+    _theModel = (WLFingerPrint *)_model;
 }
 
 @end

@@ -10,7 +10,7 @@
 
 @interface WLFingerPrintValidateVC : WLBaseVC
 
-@property (nonatomic,strong) WLFingerPrint *model;
+@property (nonatomic,strong) id model;
 @property (nonatomic,assign) WLFingerPrintOptType optType;
 
 @end

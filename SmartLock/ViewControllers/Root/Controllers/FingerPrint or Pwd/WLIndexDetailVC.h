@@ -1,5 +1,5 @@
 //
-//  WLFingerPrintDetailVC.h
+//  WLIndexDetailVC.h
 //  SmartLock
 //
 //  Created by MG_PDY on 2019/9/18.
@@ -8,8 +8,8 @@
 
 #import "WLBaseVC.h"
 
-@interface WLFingerPrintDetailVC : WLBaseVC
+@interface WLIndexDetailVC : WLBaseVC
 
-@property (nonatomic,strong) WLFingerPrint *model;
+@property (nonatomic,strong) WLBaseModel *model;
 
 @end

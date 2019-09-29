@@ -10,5 +10,6 @@
 #define WLModelsHeader_h
 
 #import "WLFingerPrint.h"   //指纹
+#import "WLPassword.h"      //密码
 
 #endif /* WLModelsHeader_h */

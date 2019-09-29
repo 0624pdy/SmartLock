@@ -1,18 +1,23 @@
 //
-//  WLFingerPrintListVC.m
+//  WLIndexListVC.m
 //  SmartLock
 //
 //  Created by MG_PDY on 2019/9/15.
 //  Copyright © 2019 彭端阳. All rights reserved.
 //
 
-#import "WLFingerPrintListVC.h"
+#import "WLIndexListVC.h"
 
-#import "WLAddFingerPrintVC.h"      //添加指纹
-#import "WLFingerPrintDetailVC.h"   //指纹详情
+#import "WLIndexFormVC.h"      //添加
+#import "WLIndexDetailVC.h"   //详情
 
-@interface WLFingerPrintListVC ()
-
+@interface WLIndexListVC ()
+{
+    NSString *__navTitle__;
+    NSArray *__originDatas__;
+    WLVcType __detailType__;
+    WLVcType __addType__;
+}
 @property (weak, nonatomic) IBOutlet UITableView *listView;
 @property (weak, nonatomic) IBOutlet WLSubmitButton *btn;
 
@@ -21,13 +26,33 @@
 
 @end
 
-@implementation WLFingerPrintListVC
+@implementation WLIndexListVC
 
+- (void)wl_genDefaultValues {
+    switch (self.vcType) {
+        case WLVcType_List_FingerPrint: {
+            __navTitle__ = @"开门指纹";
+            __originDatas__ = WLDataManager.fingerPrintList;
+            __detailType__ = WLVcType_Detail_Finger;
+            __addType__ = WLVcType_Form_FingerName;
+        }
+            break;
+        case WLVcType_List_Password: {
+            __navTitle__ = @"开门密码";
+            __originDatas__ = WLDataManager.passwordList;
+            __detailType__ = WLVcType_Detail_Password;
+            __addType__ = WLVcType_Form_PasswordName;
+        }
+            break;
+        default:
+            break;
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.title = @"开门指纹";
+    self.navigationItem.title = __navTitle__;
     
     _listView.backgroundColor   = WLColor_245;
     _listView.separatorColor    = WLColor_(225);
@@ -38,9 +63,7 @@
     WeakSelf(weakSelf)
     _btn.btnTitle = @"添加";
     _btn.block_click = ^(id sender) {
-        ///TODO: 添加
-        WLAddFingerPrintVC *vc = [[WLAddFingerPrintVC alloc] init];
-        [weakSelf.navigationController pushViewController:vc animated:YES];
+        [weakSelf action_new:nil];
     };
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,14 +85,22 @@
 #pragma mark - Datas
 
 - (void)loadDatas {
-    NSArray *datas = @[
-                           [WLFingerPrint withName:@"左手 - 大拇指"],
-                           [WLFingerPrint withName:@"右手 - 中指"],
-                           [WLFingerPrint withName:@"左脚 - 拇指"],
-                      ];
+    NSArray *datas = __originDatas__;
     [self.sec wl_addObjs:datas];
     
     [_listView reloadData];
+}
+
+
+
+
+#pragma mark - Actions
+
+- (void)action_new:(id)sender {
+    WLIndexFormVC *vc = [[WLIndexFormVC alloc] init];
+    vc.vcType = __addType__;
+    vc.isEdit = NO;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
@@ -107,7 +138,8 @@
     
     WLFingerPrint *model = (WLFingerPrint *)row;
     
-    WLFingerPrintDetailVC *vc = [[WLFingerPrintDetailVC alloc] init];
+    WLIndexDetailVC *vc = [[WLIndexDetailVC alloc] init];
+    vc.vcType = __detailType__;
     vc.model = model;
     [self.navigationController pushViewController:vc animated:YES];
 }
